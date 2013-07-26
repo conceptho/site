@@ -55,6 +55,10 @@
                 display:table-cell;
                 margin:0px;
             }
+            
+            #menu .active {
+                text-decoration: underline;
+            }
 
             .mail-us {
                 color:#6AC07A;
@@ -238,6 +242,10 @@
                 $('#menu').on('click', 'a', function(){
                     var id = $(this).attr('href');
                     var content = $(id);
+                    
+                    $(this).parent().siblings().find('.active').removeClass('active');
+                    $(this).toggleClass('active');
+                    
                     $('.content:not('+id+')').slideUp("fast");
                     content.slideToggle("fast");
                
