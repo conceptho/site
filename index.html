@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Conceptho</title>
         <link href='https://fonts.googleapis.com/css?family=Dosis:200,400' rel='stylesheet' type='text/css'>
+        <meta name="viewport" content="width=device-width" />
         <style type="text/css" media="screen">
             body {
                 background-color: #4d4d4d;
@@ -115,7 +116,7 @@
                 -ms-transition:all 0.3s ease;
                 -o-transition:all 0.3s ease;
                 transition:all 0.3s ease;
-                -webkit-filter:saturate(60%);
+                -webkit-filter:saturate(20%);
                 -moz-box-shadow:0 0 6px rgba(0, 0, 0, 0.6);
                 -webkit-box-shadow:0 0 12px rgba(0, 0, 0, 0.6);
                 box-shadow:0 0 6px rgba(0, 0, 0, 0.6);
@@ -183,7 +184,7 @@
             <div id="products" class="content hidden">
                 <h2>Products</h2>
                 <a href="http://rockpigeon.com.br">
-                    <img width="100%" src="http://static.rockpigeon.com.br/assets/1d5cefb7/img/logo.png" alt="RockPigeon" />
+                    <img width="100%" src="images/rockpigeon.png" alt="RockPigeon" />
                 </a>
                 <p>RockPigeon is an email marketing delivery and management service focused on segmentation and results monitoring.</p>
             </div>
@@ -191,7 +192,7 @@
                 <h2>Team</h2>
                 <ul>
                     <li>
-                        <img width="50%" src="https://secure.gravatar.com/avatar/0f44108c190d239998e6c70552e0b5d9?s=120" />
+                        <img width="50%" src="images/andremetzen.jpeg" />
                         <div class="about">
                             <h3>Andre Metzen</h3>
                             <span class="title">Lead developer</span>
@@ -201,7 +202,7 @@
                     </li>
 
                     <li>
-                        <img width="50%" src="https://secure.gravatar.com/avatar/dfba0fed4198c4f9fcdfda99da7d7c08?s=120" />
+                        <img width="50%" src="images/josmardias.jpeg" />
                         <div class="about">
                             <h3>Josmar Dias</h3>
                             <span class="title">Infra-structure</span>
@@ -211,7 +212,7 @@
                     </li>
 
                     <li>
-                        <img width="50%" src="https://secure.gravatar.com/avatar/f1f0169f035a0c26ea168b8d7581eae2?s=120" />
+                        <img width="50%" src="images/thiagofassina.jpeg" />
                         <div class="about">
                             <h3>Thiago Fassina</h3>
                             <span class="title">Web developer</span>
@@ -242,17 +243,29 @@
             })();
         </script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-        <script>
+        <script type="text/javascript">
             $(function(){
+                function isMobile() { return ('ontouchstart' in document.documentElement);}
+                
                 $('#menu').on('click', 'a', function(){
                     var id = $(this).attr('href');
                     var content = $(id);
                     
+                    _gaq.push(['_trackPageview', id]);
+                    
                     $(this).parent().siblings().find('.active').removeClass('active');
                     $(this).toggleClass('active');
                     
-                    $('.content:not('+id+')').slideUp("fast");
-                    content.slideToggle("fast");
+                    if(!isMobile())
+                    {
+                        $('.content:not('+id+')').slideUp('fast');
+                        content.slideToggle('fast');
+                    }
+                    else
+                    {
+                        $('.content:not('+id+')').hide();
+                        content.toggle();
+                    }
                
                     var contentTop = content.offset().top;
                     if($(window).height() < contentTop);
