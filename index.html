@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Conceptho</title>
+        <link href='https://fonts.googleapis.com/css?family=Dosis:200,400' rel='stylesheet' type='text/css'>
+        <style type="text/css" media="screen">
+            body {
+                background-color: #4d4d4d;
+                font-family: 'Dosis', sans-serif;
+                color: white;
+                text-shadow: 1px 1px #1a1a1a;
+                overflow-y: scroll;
+            }
+
+            a, a:link, a:visited, a:active {
+                color: white;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+
+            .main {
+                margin: auto;
+                width:99%;
+                text-align: center;
+                position:absolute;
+            }
+
+            h1 {
+                text-indent: -9999px;
+                background: url(images/logo_vertical_2.png) no-repeat;
+                background-size: cover;
+                height: 484px;
+                width:302px;
+                margin:auto;
+            }
+            p {
+                font-size: 1.15em;
+                font-weight: lighter;
+                letter-spacing: 0.15em;
+                color:#6AC07A;
+            }
+
+            #menu {
+                list-style: none;
+                width:302px;
+                margin:30px auto 0px auto;
+                padding:0px;
+                display: table;
+            }
+
+            #menu li {
+                display:table-cell;
+                margin:0px;
+            }
+
+            .mail-us {
+                color:#6AC07A;
+                font-weight: lighter;
+                unicode-bidi: bidi-override;
+                direction: rtl;
+                margin-top: 20px;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            .content {
+                width:282px;
+                margin: 10px auto;
+                padding:5px 5px;
+                border-radius: 3px;
+
+
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+                background-color: rgba(0,0,0,0.2);
+                border-right: solid #494949 1px;
+                border-bottom: solid #494949 1px;
+                border-top: solid #2b2b2b 1px;
+                border-left: solid #2b2b2b 1px;
+                padding: 20px;
+            }
+
+            .content h2 {
+                display:none;
+            }
+
+            .content p {
+                color: #FFF;
+                font-weight: normal;
+                text-align: left;
+                font-size:1em;
+            }
+            
+            .content>p {
+                margin: 0px;
+            }
+
+            #team img {
+                float:left;
+                width:30%;
+                margin-right:15px;
+
+                -moz-transition:all 0.3s ease;
+                -webkit-transition:all 0.3s ease;
+                -ms-transition:all 0.3s ease;
+                -o-transition:all 0.3s ease;
+                transition:all 0.3s ease;
+                -webkit-filter:saturate(40%);
+            }
+
+            #team li:hover img {
+                z-index:2;
+                -moz-box-shadow:0 0 12px rgba(0, 0, 0, 0.6);
+                -webkit-box-shadow:0 0 12px rgba(0, 0, 0, 0.6);
+                box-shadow:0 0 12px rgba(0, 0, 0, 0.6);
+                -webkit-filter:saturate(100%);
+            }
+
+            #team ul {
+                list-style: none;
+                padding:0px;
+                margin:0px;
+            }
+
+            #team ul li {
+                display:block;
+                margin-bottom: 25px;
+            }
+
+            #team .about {
+                float:left;
+                text-align: left;
+            }
+
+            #team h3 {
+                margin:0px;
+            }
+
+            #team .title {
+                font-size:0.8em;
+            }
+            
+            #jobs a {
+                text-decoration: underline;
+            }
+
+            .clear {
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <p>making the web a more humane place</p>
+            <h1>conceptho</h1>
+            <ul id="menu">
+                <li><a href="#about">about</a></li>
+                <li><a href="#products">products</a></li>
+                <li><a href="#team">team</a></li>
+                <li><a href="#jobs">jobs</a></li>
+            </ul>
+            <div id="about" class="content hidden">
+                <h2>About</h2>
+                <p>
+                    We are a startup located in Vitória, Brazil. We develop web services with excellence. In addition we aim to create the best company to work for around the world, building an exciting environment, valuing our staff and creating projects that make us proud.
+                </p>
+            </div>
+            <div id="products" class="content hidden">
+                <h2>Products</h2>
+                <a href="http://rockpigeon.com.br">
+                    <img width="100%" src="http://static.rockpigeon.com.br/assets/1d5cefb7/img/logo.png" alt="RockPigeon" />
+                </a>
+                <p>RockPigeon it's an email marketing delivery and management service focused on segmentation and results monitoring.</p>
+            </div>
+            <div id="team" class="content hidden">
+                <h2>Team</h2>
+                <ul>
+                    <li>
+                        <img width="50%" src="https://secure.gravatar.com/avatar/0f44108c190d239998e6c70552e0b5d9?s=120" />
+                        <div class="about">
+                            <h3>Andre Metzen</h3>
+                            <span class="title">Lead developer</span>
+                            <p></p>
+                        </div>
+                        <br class="clear">
+                    </li>
+
+                    <li>
+                        <img width="50%" src="https://secure.gravatar.com/avatar/dfba0fed4198c4f9fcdfda99da7d7c08?s=120" />
+                        <div class="about">
+                            <h3>Josmar Dias</h3>
+                            <span class="title">Infra-structure</span>
+                            <p></p>
+                        </div>
+                        <br class="clear">
+                    </li>
+
+                    <li>
+                        <img width="50%" src="https://secure.gravatar.com/avatar/f1f0169f035a0c26ea168b8d7581eae2?s=120" />
+                        <div class="about">
+                            <h3>Thiago Fassina</h3>
+                            <span class="title">Web developer</span>
+                            <p></p>
+                        </div>
+                        <br class="clear">
+                    </li>
+                </ul>
+
+            </div>
+            <div id="jobs" class="content hidden">
+                <h2>Jobs</h2>
+                <p>
+                    We are always looking for new members to join our team. If you care about the things that you create, can be guided by your own and is hungry for knowledge, please let us know, we are <a href="https://docs.google.com/spreadsheet/viewform?formkey=dGx5Z1JzQXd0Q3lDcGEyUFFJYVpYZVE6MQ#gid=0">looking for you</a>.
+                </p>
+            </div>
+            <div class="mail-us">moc.ohtpecnoc@otatnoc</div>
+        </div>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-33590765-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $('#menu').on('click', 'a', function(){
+                    var id = $(this).attr('href');
+                    var content = $(id);
+                    $('.content:not('+id+')').slideUp("fast");
+                    content.slideToggle("fast");
+               
+                    var contentTop = content.offset().top;
+                    if($(window).height() < contentTop);
+                        $('body').animate({'scrollTop': contentTop-30});
+               
+               
+                    return false;
+                });
+            })
+        </script>
+    </body>
+</html>
