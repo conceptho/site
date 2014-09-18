@@ -30,6 +30,9 @@ h5,
 h6 {
   font-weight: 300;
 }
+a {
+  color: #929295;
+}
 a:visited {
   color: #929295;
 }
