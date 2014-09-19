@@ -220,9 +220,17 @@ h1.slogan {
 .pos7 { background-position-y: -(7*@widthRosto);}
 .pos8 { background-position-y: -(8*@widthRosto);}
 
-#mosca {
+#fly {
     background: url(../img/mosca.png);
     width: 22px;
-    height:22px;
+    height:22px; 
     position: absolute;
+    
+    &.anim1 {
+        background-position-y: -22px;
+    }
+    
+    &.anim2 {
+        background-position-y: 0px;
+    }
 }

@@ -213,9 +213,16 @@ h1.slogan {
 .pos8 {
   background-position-y: -960px;
 }
-#mosca {
+#fly {
   background: url(../img/mosca.png);
   width: 22px;
   height: 22px;
   position: absolute;
+}
+
+#fly.anim1 {
+    background-position-y: -22px;
+}
+#fly.anim2 {
+    background-position-y: 0px;
 }

@@ -39,109 +39,6 @@ function moveEyes(obj, event)
     obj.addClass("pos" + f);
 }
 
-function operaEvento(evento) {
-    $("#saida").html($("#saida").html() + evento.type + ": " + evento.which + ", ")
-}
-
-//$(document).keypress(operaEvento);
-
-//Array com as teclas de cada pessoa e seu elemento
-var pessoas = [
-    {
-        "nome": "andre",
-        "key": 97,
-        "el": $('.andre')
-    },
-    {
-        "nome": "gabi",
-        "key": 103,
-        "el": $('.gabi')
-    },
-    {
-        "nome": "romulo",
-        "key": 114,
-        "el": $('.romulo')
-    },
-    {
-        "nome": "breno",
-        "key": 98,
-        "el": $('.breno')
-    }
-]
-
-//Verifica se a posição X do background já foi alterado
-function jaMudouX(el) {
-    var p = el.css("background-position-x");
-    if (p == -120) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-//Muda posição X de um background
-function mudaX(el, x) {
-    if (!jaMudouX(el)) {
-        el.css("background-position-x", x);
-    }
-}
-
-//Zera a posição X de um background
-function defaultX(){
-    for(i in pessoas){
-        if(!jaMudouX(pessoas[i].el)){
-            mudaX(pessoas[i].el, 0);
-        }
-    }
-}
-
-var pos = 0;
-
-// CHEATS
-/*
-$(document).keypress(function (e) {
-    if (e.which == pessoas[0].key) {
-        defaultX();
-        mudaX(pessoas[0].el, -120);
-    }
-    if (e.which == pessoas[1].key) {
-        defaultX();
-        mudaX(pessoas[1].el, -120);
-    }
-    if (e.which == pessoas[2].key) {
-        defaultX();
-        mudaX(pessoas[2].el, -120);
-    }
-    if (e.which == pessoas[3].key) {
-        defaultX();
-        mudaX(pessoas[3].el, -120);
-    }
-    if (e.which == 116) {
-        $(".andre").css("background-position-x", -120);
-        $(".gabi").css("background-position-x", -120);
-        $(".romulo").css("background-position-x", -120);
-        $(".breno").css("background-position-x", -120);
-    }
-    if (e.which == 108) {
-        setInterval(function(){
-            defaultX();
-            mudaX(pessoas[pos].el, -120);
-            if(pos == 3) pos = 0;
-                else pos++;
-        }, 100);
-    }
-    
-});
-*/
-
-var mosca = {
-    baseY: $("#jobs").offset().top,
-    baseX: $(window).width()/2,
-    pageX: 0,
-    pageY: 0,
-    iter: 0,
-    img: 0
-};
 
 var mouseFollow = true;
 
@@ -160,49 +57,41 @@ $(function () {
     
     cheet(decodeURI("%E2%86%91%20%E2%86%91%20%E2%86%93%20%E2%86%93%20%E2%86%90%20%E2%86%92%20%E2%86%90%20%E2%86%92%20b%20a"), function () {
         mouseFollow = false;
-        mosca.baseY = $("#team").offset().top + ($("#team").height()/2);
-        console.log(mosca);
+        console.log('opa');
+        var fly = {
+            baseY: $("#team").offset().top + ($("#team").height()/2),
+            baseX: $(window).width()/2,
+            iter: 0
+        };
         setInterval(function(){
-            mosca.iter++;
+            fly.iter++;
 
-            mosca.pageX = mosca.baseX + (Math.pow(Math.sin(mosca.iter/20),2)*Math.cos(mosca.iter/26)*230);
-            mosca.pageY = mosca.baseY - (Math.cos(mosca.iter/20)*Math.sin(mosca.iter/40)*230);
+            fly.pageX = fly.baseX + (Math.pow(Math.sin(fly.iter/20),2)*Math.cos(fly.iter/26)*230);
+            fly.pageY = fly.baseY - (Math.cos(fly.iter/20)*Math.sin(fly.iter/40)*230);
 
-            $("#mosca").css({top: mosca.pageY, left: mosca.pageX});
-
-            $('.rosto').each(function (i, el) {
-                moveEyes($(el), mosca);
-            });
-
-            if(mosca.img == 0){
-                $("#mosca").css("background-position-y", "-22px");
-                mosca.img = 1;
-            }else {
-                $("#mosca").css("background-position-y", 0);
-                mosca.img = 0;
-            }
-
-
+            $("#fly").css({top: fly.pageY, left: fly.pageX});
+            if($("#fly").hasClass('anim1'))
+                $("#fly").removeClass('anim1').addClass('anim2');
+            else
+                $("#fly").removeClass('anim2').addClass('anim1');
+            
+            $('.rosto').each(function (i, el) { moveEyes($(el), fly); });
         }, 50);
     });
 
     //
     var pageHeight = $(window).height();
-    $(".divider2").css("height", pageHeight * 0.9);
+    $(".divider2").css("height", pageHeight * 0.8);
     $(window).resize(function () {
         var pageHeight = $(window).height();
-        $(".divider2").css("height", pageHeight * 0.9);
-        //console.log("Altura da Janela: " + (pageHeight - (pageHeight*0.1)));
+        $(".divider2").css("height", pageHeight * 0.8);
     });
 
-    //Âncora com rolagem
     var $root = $('html, body');
     var marginTop = ($(window).height() * 0.1);
     var pageWidth = $(window).width();
     if (pageWidth > 991)
         marginTop = ($(window).height() * 0.3);
-    //console.log("Valor do Margin Top: "+ marginTop);
-    //console.log("Largura da Janela: " + $(window).width());
     $('a').click(function () {
         var href = $.attr(this, 'href');
         $root.animate({
