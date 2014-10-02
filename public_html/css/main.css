@@ -140,6 +140,10 @@ h1.slogan {
   height: 120px;
   margin-bottom: 20px;
 }
+.pessoa .label {
+  font-weight: normal;
+  line-height: 2em;
+}
 .rosto {
   position: relative;
   float: left;
@@ -219,10 +223,10 @@ h1.slogan {
   height: 22px;
   position: absolute;
 }
-
 #fly.anim1 {
-    background-position-y: -22px;
+  background-position-y: -22px;
 }
 #fly.anim2 {
-    background-position-y: 0px;
+  background-position-y: 0px;
 }
+/*# sourceMappingURL=main.css.map */
