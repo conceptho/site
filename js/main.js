@@ -1,3 +1,68 @@
+//Mudança de idioma
+var queryDict = {};
+location.search.substr(1).split("&").forEach(function(item) {queryDict[item.split("=")[0]] = item.split("=")[1]});
+
+function setInitialLang() {
+    var userLang = navigator.language || navigator.userLanguage;
+    var userLang_lower = userLang.toLowerCase();
+
+    (queryDict['lang']) ? setLang(queryDict['lang']) : setLang(userLang_lower);
+}
+
+function setLang(userLang) {
+    var en_p = $('.en');
+    var pt_p = $('.pt');
+
+    if (userLang == "pt-br" || userLang == "pt") {
+        queryDict['lang'] = 'pt';
+        en_p.hide();
+        pt_p.show();
+        $('.set-lang-pt').addClass('active-lang');
+        $('.set-lang-en').removeClass('active-lang');
+    } else {
+        queryDict['lang'] = 'en';
+        en_p.show();
+        pt_p.hide();
+        $('.set-lang-en').addClass('active-lang');
+        $('.set-lang-pt').removeClass('active-lang');
+    }
+}
+
+setInitialLang();
+
+var flags = $('.source-change-lang').children();
+var menu = $('.source-menu').children();
+var menuController = $('.menu-controller');
+
+$.each(menuController, function (key, el) {
+    var active = el.getAttribute('data-menu-active');
+    $(el)
+        .append(menu.clone())
+        .find('[href=#' + active + ']')
+        .parent()
+        .addClass('active');
+});
+
+$('.menu-controller').append(flags);
+
+//Menu
+function changeMenu() {
+    if ($(window).width() < 992) {
+        $('.menu-controller').addClass('menu-horizontal');
+        $('.menu-controller').removeClass('menu');
+    }
+    else if ($(window).width() >= 992) {
+        $('.menu-controller').removeClass('menu-horizontal');
+        $('.menu-controller').addClass('menu');
+    }
+}
+
+changeMenu();
+window.onresize = function(){
+    changeMenu();
+};
+
+//Team
 function moveEyes(obj, event)
 {
     var mX = event.pageX;
@@ -52,9 +117,7 @@ $(function () {
             });
         }
     });
-    
-    
-    
+
     cheet(decodeURI("%E2%86%91%20%E2%86%91%20%E2%86%93%20%E2%86%93%20%E2%86%90%20%E2%86%92%20%E2%86%90%20%E2%86%92%20b%20a"), function () {
         mouseFollow = false;
         console.log('opa');
@@ -93,12 +156,14 @@ $(function () {
     if (pageWidth > 991)
         marginTop = ($(window).height() * 0.3);
     $('a').click(function () {
-        var href = $.attr(this, 'href');
-        $root.animate({
-            scrollTop: $(href).offset().top - marginTop
-        }, 500, function () {
-            window.location.hash = href;
-        });
+        if(this.hasAttribute('href')) {
+            var href = $.attr(this, 'href');
+            $root.animate({
+                scrollTop: $(href).offset().top - marginTop
+            }, 500, function () {
+                window.location.hash = href;
+            });
+        }
         return false;
     });
 });
