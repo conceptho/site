@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Conceptho - Making the web a more humane place</title>
-    <meta name="description" content="We are a startup located in Vitória, Brazil. We develop web services with excellence. In addition we decided to create the best place to work on Earth, building an exciting environment, valuing our staff and creating projects that makes us proud of.">
+    <meta name="description" content=">Somos uma empresa localizada em Vitória, Brasil. Desenvolvemos serviços web com excelência. Além disso, decidimos criar o melhor lugar para trabalhar na Terra, construindo um ambiente excitante, valorizando nossa equipe e criando projetos que nos deixam orgulhosos.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="development, startup, web, brazil, vitória, rockpigeon, conceptho, design, ui, ux, interface design, user interface, user experience">
 
@@ -18,7 +18,7 @@
     <meta property="og:url" content="http://conceptho.com">
     <meta property="og:title" content="Conceptho - Making the web a more humane place">
     <meta property="og:site_name" content="Conceptho">
-    <meta property="og:description" content="We are a startup located in Vitória, Brazil. We develop web services with excellence. In addition we decided to create the best place to work on Earth, building an exciting environment, valuing our staff and creating projects that makes us proud of.">
+    <meta property="og:description" content=">Somos uma empresa localizada em Vitória, Brasil. Desenvolvemos serviços web com excelência. Além disso, decidimos criar o melhor lugar para trabalhar na Terra, construindo um ambiente excitante, valorizando nossa equipe e criando projetos que nos deixam orgulhosos.">
     <meta property="og:image" content="http://conceptho.com/img/logo.png">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="300">
@@ -27,7 +27,12 @@
 
     <link rel='shortcut icon' href='favicon.ico' />
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <style>
+        .en {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -134,7 +139,17 @@
                             <span class="en"><i>customers</i></span>
                             <span class="pt"><i>clientes</i></span>
                         </h3>
-                        <a href="http://profissa.net" target="_blank"><img style="margin-bottom:8px;" width="260" src="img/logo-profissa.png" /></a>
+                        <div class="clients">
+                            <a class="item-client" href="http://profissa.net" target="_blank">
+                                <img width="160" src="img/logo-profissa.png" />
+                            </a>
+                            <a class="item-client" href="https://axbroker.com/" target="_blank">
+                                <img width="170"  src="img/logo-axbroker.png" />
+                            </a>
+                            <a class="item-client client-tribuna" href="https://www.tribunaonline.com.br/" target="_blank">
+                                <img width="160"  src="img/logo-tribunaonline.svg" />
+                            </a>
+                        </div>
                     </section>
 
                     <div class="divider2"></div>
