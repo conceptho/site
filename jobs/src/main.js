@@ -88,15 +88,34 @@ function ConcepthoTerm (config) {
     '  earthquake    <span class="text-muted">I\'m feeling everything very quiet</span><br>' +
     '  update        <span class="text-muted">Update and restart windows</span><br><br>'
 
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Terminal Command',
+      eventAction: 'type',
+      eventLabel: 'help'
+    })
+
     return manText
   }
 
   function version () {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Terminal Command',
+      eventAction: 'type',
+      eventLabel: 'version'
+    })
     return '<br><span style="color:#5dc570">Conceptho terminal version: <strong>0.0.1</strong><br></span><br>'
   }
 
   function hummm () {
     console.warn('Now we are talking! Who is the airplane\'s inventor??')
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Terminal Command',
+      eventAction: 'type',
+      eventLabel: 'hummm (?)'
+    })
     return '<br><span style="color:#5dc570">If you have not opened the <strong>console</strong> yet, you\'ve started by the hard way...</span><br><br>'
   }
 
@@ -108,10 +127,24 @@ function ConcepthoTerm (config) {
     'Facebook:     <span class="text-primary"><a target="_blank" href="https://www.facebook.com/conceptho/">facebook.com/conceptho</a></span><br>' +
     'Form:         <span class="text-primary"><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScCv0-V9NsiaQiYnENji9C8LnekNb98BemAcbQRLQ2OU1PNCQ/viewform?formkey=dGx5Z1JzQXd0Q3lDcGEyUFFJYVpYZVE6MQ#gid=0">fill form</a></span><br><br>'
 
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Terminal Command',
+      eventAction: 'type',
+      eventLabel: 'contact'
+    })
+
     return concactText
   }
 
   function shutdown (argv, argc) {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Terminal Command',
+      eventAction: 'type',
+      eventLabel: 'shutdown'
+    })
+
     var count = 5
     termBuffer = `<span style="color:#5dc570">This terminal will <strong>shutdown</strong> in <strong>${count}</strong></span>`
     renderPartialTerm()
@@ -127,14 +160,35 @@ function ConcepthoTerm (config) {
   }
 
   function fly (argv, argc) {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Terminal Command',
+      eventAction: 'type',
+      eventLabel: 'fly'
+    })
+
     return '<br><span style="color:#5dc570">Konami code in the team area in <a target="_blank" href="http://conceptho.com/#team">conceptho.com</a> can be interesting...</span><br><br>'
   }
 
   function train (argv, argc) {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Terminal Command',
+      eventAction: 'type',
+      eventLabel: 'train'
+    })
+
     return '<br><h5 style="color:#5dc570">Congrats, you won a point. Send us an email and put it on the subject: <strong>I see a fly flying</strong>.</h5><br>'
   }
 
   function earthquake (argv, argc) {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Terminal Command',
+      eventAction: 'type',
+      eventLabel: 'earthquake'
+    })
+
     document.body.classList.add('apply-shake')
 
     setTimeout(function () {
@@ -145,6 +199,13 @@ function ConcepthoTerm (config) {
   }
 
   function update (argv, argc) {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Terminal Command',
+      eventAction: 'type',
+      eventLabel: 'update'
+    })
+
     const ifrm = document.createElement('iframe')
     ifrm.setAttribute('src', 'http://fakeupdate.net/win10u/')
     ifrm.style.width = '100%'
@@ -320,12 +381,36 @@ if (termEl) {
 }
 
 function santosDumont () {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'Terminal Command',
+    eventAction: 'type',
+    eventLabel: 'santosDumont()'
+  })
+
   console.error('Wrong! I\'m also Brazilian, but the whole world knows it was not Santos Dumont. Try another...')
 }
 
 function wrightBrothers () {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'Terminal Command',
+    eventAction: 'type',
+    eventLabel: 'wrightBrothers()'
+  })
+
   console.log('You got it right! Have you seen the %ctrain %cthat passes in the %cterminal?', 'color:red', 'color:black', 'color:blue')
 }
 
+function openTerminalEvent () {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'Terminal Command',
+    eventAction: 'type',
+    eventLabel: 'opened terminal'
+  })
+}
+
+window.openTerminalEvent = openTerminalEvent
 window.santosDumont = santosDumont
 window.wrightBrothers = wrightBrothers
