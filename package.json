@@ -1,0 +1,25 @@
+{
+  "name": "conceptho-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:jobs": "parcel build ./jobs/src/index.html -d ./jobs --public-url '.'",
+    "watch:jobs": "parcel ./jobs/src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conceptho/site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/conceptho/site/issues"
+  },
+  "homepage": "https://github.com/conceptho/site#readme",
+  "devDependencies": {
+    "cssnano": "^4.1.8",
+    "sass": "^1.15.3"
+  }
+}
