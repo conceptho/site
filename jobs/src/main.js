@@ -263,6 +263,13 @@ function ConcepthoTerm (config) {
         if (processCommand) {
           stdout = processCommand(argv, argc)
         } else {
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'Terminal Command',
+            eventAction: 'type',
+            eventLabel: cmd
+          })
+
           stdout = '<strong>' + cmd + '</strong>: command not found\n'
         }
       } else {
@@ -272,6 +279,13 @@ function ConcepthoTerm (config) {
 
       // If an actual command happened.
       if (stdout === false) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Terminal Command',
+          eventAction: 'type',
+          eventLabel: cmd
+        })
+
         stdout = '<strong>' + cmd + '</strong>: command not found\n'
       }
 
