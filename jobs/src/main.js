@@ -207,7 +207,7 @@ function ConcepthoTerm (config) {
     })
 
     const ifrm = document.createElement('iframe')
-    ifrm.setAttribute('src', 'https://fakeupdate.net/win10u/')
+    ifrm.setAttribute('src', 'https://conceptho.com/fakeupdate')
     ifrm.style.width = '100%'
     ifrm.style.height = '100vh'
     document.body.innerHTML = ''
