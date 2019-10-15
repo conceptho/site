@@ -74,14 +74,14 @@ function ConcepthoTerm (config) {
 
   function help (argv, argc) {
     const manText = '' +
-    '<img style="margin: 15px 0 6px;height:40px;" src="http://conceptho.com/img/logo-horizontal.png"/><br>' +
+    '<img style="margin: 15px 0 6px;height:40px;" src="//conceptho.com/img/logo-horizontal.png"/><br>' +
     'version: 0.0.1<br>' +
     '-------------------------<br>' +
     '<strong>Usage:</strong> <span style="color:#5dc570;">[option]</span><br><br>' +
     'Options:<br>' +
     '  help          <span class="text-muted">Show this help</span><br>' +
     '  version       <span class="text-muted">Print the conceptho terminal version</span><br>' +
-    '  ?             <span class="text-muted">Secret command to show secret function <img width="15" src="http://emojipedia.com.br/assets/img/emoji/1f609.png"/></span><br>' +
+    '  ?             <span class="text-muted">Secret command to show secret function <img width="15" src="//emojipedia.com.br/assets/img/emoji/1f609.png"/></span><br>' +
     '  contact       <span class="text-muted">Show contact informations</span><br>' +
     '  shutdown      <span class="text-muted">Terminal shutdown</span><br>' +
     '  fly           <span class="text-muted">Do you remember the fly?</span><br>' +
@@ -123,7 +123,7 @@ function ConcepthoTerm (config) {
     const concactText = '<br>' +
     '<strong>Conceptho contacts:</strong> <br><br>' +
     'Email:        <span class="text-primary"><a target="_blank" href="mailto:vagas@conceptho.com">vagas@conceptho.com</a></span><br>' +
-    'Site:         <span class="text-primary"><a target="_blank" href="http://conceptho.com">conceptho.com</a></span><br>' +
+    'Site:         <span class="text-primary"><a target="_blank" href="https://conceptho.com">conceptho.com</a></span><br>' +
     'Facebook:     <span class="text-primary"><a target="_blank" href="https://www.facebook.com/conceptho/">facebook.com/conceptho</a></span><br>' +
     'Form:         <span class="text-primary"><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScCv0-V9NsiaQiYnENji9C8LnekNb98BemAcbQRLQ2OU1PNCQ/viewform?formkey=dGx5Z1JzQXd0Q3lDcGEyUFFJYVpYZVE6MQ#gid=0">fill form</a></span><br><br>'
 
@@ -167,7 +167,7 @@ function ConcepthoTerm (config) {
       eventLabel: 'fly'
     })
 
-    return '<br><span style="color:#5dc570">Konami code in the team area in <a target="_blank" href="http://conceptho.com/#team">conceptho.com</a> can be interesting...</span><br><br>'
+    return '<br><span style="color:#5dc570">Konami code in the team area in <a target="_blank" href="https://conceptho.com/#team">conceptho.com</a> can be interesting...</span><br><br>'
   }
 
   function train (argv, argc) {
@@ -207,7 +207,7 @@ function ConcepthoTerm (config) {
     })
 
     const ifrm = document.createElement('iframe')
-    ifrm.setAttribute('src', 'http://fakeupdate.net/win10u/')
+    ifrm.setAttribute('src', '//fakeupdate.net/win10u/')
     ifrm.style.width = '100%'
     ifrm.style.height = '100vh'
     document.body.innerHTML = ''

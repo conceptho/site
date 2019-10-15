@@ -18,13 +18,15 @@
             <div class="row">
                 <div class="col-12">
                     <h2 class="font-weight-light text-secondary">vagas</h2>
-                    <img src="logo-horizontal.png" alt="Conceptho">
+                    <label class="display-3 color-secondary font-weight-bold" for="open-terminal"  title="O que acontece se clicar aqui?" onclick="openTerminalEvent()">
+                        <img src="logo-horizontal.png" alt="Conceptho" >
+                    </label>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="margin-bottom: 200px;">
+    <section style="margin-bottom: 200px;" class="d-none">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -38,18 +40,18 @@
 
     </section>
 
-    <section class="mb-5 d-none">
+    <section class="mb-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="job-card">
                         <h1 class="font-weight-bold">
-                            <a href="./programador-estagio.html">
-                                DESENVOLVEDOR WEB <span class="font-weight-light">&#47;estágio</span>
+                            <a href="./desenvolvedor-mobile.html">
+                                DESENVOLVEDOR MOBILE <span class="font-weight-light">/estágio</span>
                             </a>
                         </h1>
                         <h2 class="font-weight-bold color-secondary">
-                            javascript, php, git, css e html
+                            react native, flutter, git, dart e javascript
                         </h2>
                         <h4 class="font-weight-bold text-secondary">
                             R$ 1.000 a R$ 1.500
@@ -58,17 +60,31 @@
                     </div>
                     <div class="job-card">
                         <h1 class="font-weight-bold">
-                            <a href="./programador.html">
-                                DESENVOLVEDOR WEB
+                            <a href="./desenvolvedor-frontend.html">
+                                DESENVOLVEDOR FRONTEND <span class="font-weight-light">/estágio</span>
                             </a>
                         </h1>
                         <h2 class="font-weight-bold color-secondary">
-                            javascript, php, git, docker, kubernetes, linux, mysql, css e html
+                            javascript, design, git, css e html
                         </h2>
                         <h4 class="font-weight-bold text-secondary">
-                            Salário a combinar
+                            R$ 1.000 a R$ 1.500
                         </h4>
-                        <h5>DE 6 A 8H COM HORÁRIO FLEXÍVEL</h5>
+                        <h5>DE 4 A 6H COM HORÁRIO FLEXÍVEL</h5>
+                    </div>
+                    <div class="job-card">
+                        <h1 class="font-weight-bold">
+                            <a href="./desenvolvedor-backend.html">
+                                DESENVOLVEDOR BACKEND <span class="font-weight-light">/estágio</span>
+                            </a>
+                        </h1>
+                        <h2 class="font-weight-bold color-secondary">
+                            javascript/node, git, docker, linux e mysql
+                        </h2>
+                        <h4 class="font-weight-bold text-secondary">
+                            R$ 1.000 a R$ 1.500
+                        </h4>
+                        <h5>DE 4 A 6H COM HORÁRIO FLEXÍVEL</h5>
                     </div>
                 </div>
             </div>
@@ -89,6 +105,20 @@
             </div>
         </div>
     </section>
+
+    <input type="checkbox" id="open-terminal" class="slide-state">
+
+    <div class="terminal-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="terminal-container">
+                        <div class="term" id="term"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <script src="./main.js"></script>
 

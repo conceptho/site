@@ -20,6 +20,6 @@
   "homepage": "https://github.com/conceptho/site#readme",
   "devDependencies": {
     "cssnano": "^4.1.8",
-    "sass": "^1.15.3"
+    "sass": "^1.23.0"
   }
 }
