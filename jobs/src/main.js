@@ -81,7 +81,7 @@ function ConcepthoTerm (config) {
     'Options:<br>' +
     '  help          <span class="text-muted">Show this help</span><br>' +
     '  version       <span class="text-muted">Print the conceptho terminal version</span><br>' +
-    '  ?             <span class="text-muted">Secret command to show secret function <img width="15" src="//emojipedia.com.br/assets/img/emoji/1f609.png"/></span><br>' +
+    '  ?             <span class="text-muted">Secret command to show secret function <img width="15" src="/img/piscadinha.png"/></span><br>' +
     '  contact       <span class="text-muted">Show contact informations</span><br>' +
     '  shutdown      <span class="text-muted">Terminal shutdown</span><br>' +
     '  fly           <span class="text-muted">Do you remember the fly?</span><br>' +
