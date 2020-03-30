@@ -1,0 +1,11 @@
+// Variables
+//
+// Setting variable values in this file will override the default bootstrap values
+$conceptho-primary-bg-color: #464648;
+$conceptho-secondary-bg-color: #1B1D1E;
+$conceptho-primary-color: #5dc570;
+
+.contrast-bg-color {
+  background-color: $conceptho-secondary-bg-color;
+  color: #fff;
+}

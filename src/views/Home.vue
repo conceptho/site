@@ -1,18 +1,53 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <section>
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-12">
+            <router-link :to="{ name: 'NotFound' }" class="btn btn-outline-light">
+              Go to Game
+            </router-link>
+          </div>
+        </div>
+      </div>
+    </section>
+<!--    <TheTopMenu />-->
+<!--    <AboutSection />-->
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+// import TheTopMenu from '../components/TheTopMenu'
+// import AboutSection from '../components/AboutSection'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    // TheTopMenu,
+    // AboutSection
   }
 }
 </script>
+
+<style lang="scss">
+@import "../assets/styles/variables";
+@import "../assets/styles/bootstrap";
+.home {
+  @extend .contrast-bg-color;
+  height: 100vh;
+}
+.manifest-container {
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+  span {
+    display: block;
+    &:nth-child(2) {
+      margin-left: -60px;
+    }
+    &:nth-child(3) {
+      margin-left: 60px;
+    }
+  }
+}
+</style>
