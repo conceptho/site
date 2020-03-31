@@ -1,5 +1,5 @@
 <template>
-  <div class="game-wrapper">
+  <div class="game-wrapper d-flex justify-content-center align-items-center">
     <div :id="containerId" v-if="downloaded"></div>
     <div class="placeholder" v-else>
       Downloading...
@@ -24,7 +24,7 @@ export default {
     this.$nextTick(() => {
       // const width = document.body.clientWidth
       // const height = document.body.clientHeight
-      this.gameInstance = game.launch(800, 600, this.containerId)
+      this.gameInstance = game.launch(900, 544, this.containerId)
     })
   },
   destroyed () {
@@ -34,10 +34,12 @@ export default {
 </script>
 
 <style lang="scss">
-body {
-  #game-container {
-    width: 100%;
-    height: 100vh;
-  }
+.game-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: #120c06;
+}
+#game-container {
+  border: 10px solid #000;
 }
 </style>
