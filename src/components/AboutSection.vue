@@ -130,7 +130,7 @@ $bg-image-03 : url('../assets/img/bg-team-03.jpg');
   height: 100%;
   background-image: $bg-image-03;
   background-size: cover;
-  background-position: center;
+  background-position: center 30%;
   transition: all .8s linear;
   filter: sepia(80%);
   &:before, &:after {
