@@ -1,14 +1,31 @@
 <template>
   <div class="top-menu">
+    <div class="mobile-menu" :class="{ 'active': mobileMenuActive }">
+      <nav class="nav nav-mobile-menu">
+        <LocaleChanger />
+        <a ref="nav-about" class="nav-link active" href="#" @click.prevent="goToSection('about')">{{ $t('about') }}</a>
+        <a ref="nav-cases" class="nav-link" href="#" @click.prevent="goToSection('cases')">{{ $t('cases') }}</a>
+        <a ref="nav-team" class="nav-link" href="#" @click.prevent="goToSection('team')">{{ $t('team') }}</a>
+        <a ref="nav-contact" class="nav-link" href="#" @click.prevent="goToSection('contact')">{{ $t('contact') }}</a>
+      </nav>
+    </div>
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 align-self-center">
-          <div class="logo ml-3 mt-3">
+          <div class="logo ml-2 ml-md-3 mt-3">
             <a href="#top-section" @click="goToSection('about')" style="color: inherit;">
               <LogoVertical width="500" />
             </a>
           </div>
-          <nav class="nav justify-content-end">
+          <div class="d-block d-md-none text-right mt-3">
+            <div class="checkbox-menu-collapse">
+              <input type="checkbox" id="menu" v-model="mobileMenuActive">
+              <label for="menu" class="icon">
+                <div class="menu"></div>
+              </label>
+            </div>
+          </div>
+          <nav class="nav justify-content-end d-none d-md-flex">
             <div ref="nav-active" class="active-nav-bar"></div>
             <LocaleChanger />
             <a ref="nav-about" class="nav-link active" href="#" @click.prevent="goToSection('about')">{{ $t('about') }}</a>
@@ -33,6 +50,11 @@ export default {
     LogoVertical,
     LocaleChanger
   },
+  data () {
+    return {
+      mobileMenuActive: false
+    }
+  },
   async mounted () {
     const routeHash = this.$route.hash
     if (routeHash) {
@@ -43,6 +65,7 @@ export default {
   },
   methods: {
     goToSection (section, withoutHash) {
+      this.mobileMenuActive = false
       const sectionRef = this.$refs[`nav-${section}`]
 
       if (!withoutHash) {
@@ -77,11 +100,124 @@ export default {
       }
     }
   }
+  // watch: {
+  //   mobileMenuActive (value) {
+  //     this.$emit('in-logo-animated', value)
+  //   }
+  // }
 }
 </script>
 
 <style lang="scss">
-@import "../assets/styles/variables";
+@import "../assets/styles/general";
+.mobile-menu {
+  position: absolute;
+  z-index: 2;
+  width: 80%;
+  height: 100vh;
+  left: -80%;
+  color: #fff !important;
+  transition: transform .12s linear;
+  &.active {
+    transform: translateX(100%);
+  }
+  &:before {
+    @extend .shadow-lg;
+    @extend .contrast-bg-color;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .90;
+  }
+  nav {
+    @extend .d-block;
+    @extend .pt-5;
+    a {
+      @extend .p-3;
+      @extend .pl-4;
+      @extend .d-block;
+      display: block;
+    }
+  }
+}
+.checkbox-menu-collapse {
+  input#menu {
+    display: none;
+  }
+
+  .icon {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    height: 24px;
+    padding: 16px;
+    width: 24px;
+  }
+  label.icon {
+    position: absolute;
+    top: 28px;
+    right: 15px;
+    z-index: 200;
+  }
+
+  .icon .menu,
+  .icon .menu::before,
+  .icon .menu::after {
+    background: #9FB1BD;
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    transition: background ease .3s, top ease .3s .3s, transform ease .3s;
+    width: 30px;
+  }
+
+  .icon:hover .menu,
+  .icon:hover .menu::before,
+  .icon:hover .menu::after {
+    background: #47B74B;
+  }
+
+  .icon .menu {
+    left: 0;
+    top: 0;
+  }
+
+  .icon .menu::before {
+    top: -10px;
+  }
+
+  .icon .menu::after {
+    top: 10px;
+  }
+
+  #menu:checked + .icon .menu {
+    background: transparent;
+  }
+
+  #menu:checked + .icon .menu::before {
+    transform: rotate(45deg);
+  }
+
+  #menu:checked + .icon .menu::after {
+    transform: rotate(-45deg);
+  }
+
+  #menu:checked + .icon .menu::before,
+  #menu:checked + .icon .menu::after {
+    top: 0;
+    transition: top ease .3s, transform ease .3s .3s;
+  }
+
+  #menu:checked ~ nav {
+    width: 200px;
+  }
+}
+
 .top-menu {
   position: fixed;
   z-index: 9;
@@ -126,7 +262,7 @@ export default {
   }
 
   &.menu-bg-base {
-    .nav {
+    .nav:not(.nav-mobile-menu) {
       .nav-link {
         &:not(.disabled) {
           color: #fff;
@@ -147,7 +283,7 @@ export default {
     .logo {
       color: $conceptho-secondary-bg-color;
     }
-    .nav {
+    .nav:not(.nav-mobile-menu) {
       .nav-link {
         &:not(.disabled) {
           color: $conceptho-secondary-bg-color;

@@ -8,11 +8,11 @@
         <div class="row justify-content-center">
           <div class="col-md-9 align-self-center">
             <div class="conceptho-slogan roboto-mono">
-              <div ref="main-slogan" class="main-slogan">
+              <div ref="main-slogan" class="main-slogan px-3 px-md-0">
                 <h4 class="display-4 font-weight-light">{{ $t('Making the web') }}</h4>
                 <h4 class="display-4">{{ $t('a more') }} <span class="font-weight-normal">{{ $t('human') }}</span> {{ $t('place') }}</h4>
               </div>
-              <div class="sub-slogan mt-3 pl-5 ml-5 rellax-vertical" data-rellax-speed="1.2">
+              <div class="sub-slogan mt-3 pl-5 pr-2 ml-md-5 rellax-vertical" data-rellax-speed="1.2">
                 {{ $t('World-class outcomes for brands and people through design, content, user experience and technology.') }}
               </div>
             </div>
@@ -96,8 +96,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/styles/variables";
-@import "../assets/styles/bootstrap";
+@import "../assets/styles/general";
 $bg-image-01 : url('../assets/img/bg-team-01.jpg');
 $bg-image-02 : url('../assets/img/bg-team-02.jpg');
 $bg-image-03 : url('../assets/img/bg-team-03.jpg');
@@ -301,7 +300,7 @@ $bg-image-03 : url('../assets/img/bg-team-03.jpg');
 .bg-white {
   background-color: #fff;
 }
-.text-our-team{
+.text-our-team {
   @extend .contrast-bg-color;
   position: relative;
   font-family: "Roboto Mono";
@@ -311,5 +310,20 @@ $bg-image-03 : url('../assets/img/bg-team-03.jpg');
 .mouse-icon {
   position: fixed;
   bottom: 0;
+}
+
+@include media-breakpoint-down(md) {
+  .conceptho-slogan {
+    margin-top: 140px;
+  }
+
+  h4.display-4 {
+    font-size: 30px;
+  }
+
+  .sub-slogan {
+    font-size: 14px;
+    width: 100%;
+  }
 }
 </style>

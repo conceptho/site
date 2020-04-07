@@ -6,6 +6,8 @@ import fontLoader from './utils/fontLoader'
 import smoothscroll from 'smoothscroll-polyfill'
 import i18n from './i18n'
 import Fragment from 'vue-fragment'
+import '../node_modules/@fortawesome/fontawesome-pro/scss/fontawesome.scss'
+import '../node_modules/@fortawesome/fontawesome-pro/scss/light.scss'
 
 smoothscroll.polyfill()
 

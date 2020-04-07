@@ -47,6 +47,10 @@ export default {
     }
   },
   created () {
+    // this.$parent.$on('in-logo-animated', event => {
+    //   this.changeLogo(event ? 'in' : 'out')
+    // })
+
     document.addEventListener('scroll', () => {
       if (this.getScrollPercent().documentPercent > 33 && !this.animated) {
         this.changeLogo('in')
