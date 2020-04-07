@@ -29,6 +29,9 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
+  scrollBehavior: (to, from, savedPosition) => {
+    return to.hash ? { selector: to.hash } : { x: 0, y: 0 }
+  },
   routes
 })
 

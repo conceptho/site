@@ -10,6 +10,12 @@ module.exports = {
       useRenderEvent: true,
       headless: true,
       onlyProduction: true
+    },
+    i18n: {
+      locale: 'en',
+      fallbackLocale: 'en',
+      localeDir: 'locales',
+      enableInSFC: true
     }
   },
   chainWebpack: config => {

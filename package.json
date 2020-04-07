@@ -5,17 +5,25 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
   },
   "dependencies": {
+    "animejs": "^3.1.0",
+    "aos": "^3.0.0-beta.6",
     "bootstrap": "^4.4.1",
     "core-js": "^3.6.4",
     "phaser": "^3.22.0",
     "register-service-worker": "^1.6.2",
+    "rellax": "^1.12.1",
+    "smoothscroll-polyfill": "^0.4.4",
     "vue": "^2.6.11",
+    "vue-fragment": "^1.5.1",
+    "vue-i18n": "^8.0.0",
     "vue-router": "^3.1.5"
   },
   "devDependencies": {
+    "@kazupon/vue-i18n-loader": "^0.3.0",
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
     "@vue/cli-plugin-pwa": "~4.2.0",
@@ -32,6 +40,7 @@
     "node-sass": "^4.12.0",
     "prerender-spa-plugin": "^3.2.1",
     "sass-loader": "^8.0.2",
+    "vue-cli-plugin-i18n": "~0.6.1",
     "vue-cli-plugin-prerender-spa": "~1.1.6",
     "vue-template-compiler": "^2.6.11"
   }

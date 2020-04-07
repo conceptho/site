@@ -2,18 +2,20 @@
   <div class="top-menu">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-3 align-self-center">
-          <h1 class="m-0">Olá</h1>
-        </div>
-        <div class="col-9 align-self-center">
+        <div class="col-12 align-self-center">
+          <div class="logo ml-3 mt-3">
+            <a href="#top-section" @click="goToSection('about')" style="color: inherit;">
+              <LogoVertical width="500" />
+            </a>
+          </div>
           <nav class="nav justify-content-end">
             <div ref="nav-active" class="active-nav-bar"></div>
-            <a class="nav-link lang-option disabled" href="#">pt</a>
-            <a class="nav-link lang-option" href="#" tabindex="-1" aria-disabled="true">en</a>
-            <a ref="nav-about" class="nav-link active" href="#" @click.prevent="goToSection('about')">about</a>
-            <a ref="nav-cases" class="nav-link" href="#" @click.prevent="goToSection('cases')">cases</a>
-            <a ref="nav-team" class="nav-link" href="#" @click.prevent="goToSection('team')">team</a>
-            <a ref="nav-contact" class="nav-link" href="#" @click.prevent="goToSection('contact')">contact</a>
+            <LocaleChanger />
+            <a ref="nav-about" class="nav-link active" href="#" @click.prevent="goToSection('about')">{{ $t('about') }}</a>
+            <a ref="nav-cases" class="nav-link" href="#" @click.prevent="goToSection('cases')">{{ $t('cases') }}</a>
+            <a ref="nav-team" class="nav-link" href="#" @click.prevent="goToSection('team')">{{ $t('team') }}</a>
+            <a ref="nav-contact" class="nav-link" href="#" @click.prevent="goToSection('contact')">{{ $t('contact') }}</a>
+            <router-link ref="nav-notfound" class="nav-link" :to="{ name: 'NotFound' }">{{ $t('404') }}</router-link>
           </nav>
         </div>
       </div>
@@ -22,16 +24,33 @@
 </template>
 
 <script>
+import LogoVertical from './LogoVertical'
+import LocaleChanger from './LocaleChanger'
+
 export default {
   name: 'TheTopMenu',
+  components: {
+    LogoVertical,
+    LocaleChanger
+  },
   async mounted () {
-    await this.goToSection('cases')
-    await this.goToSection('about')
+    const routeHash = this.$route.hash
+    if (routeHash) {
+      await this.goToSection(routeHash.split('-')[0].split('#')[1], true)
+    } else {
+      await this.goToSection('about')
+    }
   },
   methods: {
-    goToSection (section) {
+    goToSection (section, withoutHash) {
+      const sectionRef = this.$refs[`nav-${section}`]
+
+      if (!withoutHash) {
+        this.$router.push({ hash: `#${section}-section` })
+      }
+
       const offsetNavActive = this._getOffset(this.$refs['nav-active'])
-      const offsetNavSection = this._getOffset(this.$refs[`nav-${section}`])
+      const offsetNavSection = this._getOffset(sectionRef)
       const navActive = this.$refs['nav-active']
 
       if (offsetNavActive.left < offsetNavSection.left) {
@@ -103,17 +122,50 @@ export default {
         //  bottom: .4rem;
         //}
       }
+    }
+  }
 
-      &.lang-option {
-        &:nth-child(2) {
-          padding: 0.5rem .2rem;
+  &.menu-bg-base {
+    .nav {
+      .nav-link {
+        &:not(.disabled) {
+          color: #fff;
         }
-        &:nth-child(3) {
-          padding-left: 0.2rem;
-          margin-right: 1rem;
+
+        &:hover {
+          color: $conceptho-primary-color;
         }
       }
     }
+  }
+  &.menu-bg-violet, &.menu-bg-team {
+    .logo {
+      color: #fff;
+    }
+  }
+  &.menu-bg-white {
+    .logo {
+      color: $conceptho-secondary-bg-color;
+    }
+    .nav {
+      .nav-link {
+        &:not(.disabled) {
+          color: $conceptho-secondary-bg-color;
+        }
+        &:hover {
+          color: $conceptho-primary-color;
+        }
+      }
+    }
+  }
+}
+.logo {
+  position: fixed;
+  color: $conceptho-primary-color;
+  transition: color .3s linear;
+  transition: opacity .2s linear;
+  &:hover {
+    opacity: .5;
   }
 }
 </style>
