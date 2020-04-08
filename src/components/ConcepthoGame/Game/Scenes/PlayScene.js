@@ -9,8 +9,7 @@ import {
 export default class PlayScene extends Scene {
   constructor () {
     super({ key: 'PlayScene' })
-    this.playerVelocity = 500
-    this.touchGround = 0
+    this.playerVelocity = 200
     this.cursors = null
     this.endedGame = false
     this.scorePoints = 0
@@ -21,7 +20,7 @@ export default class PlayScene extends Scene {
   }
 
   create () {
-    initObjects(['parallax', 'platform', 'gameOver', 'velocity'], this)
+    initObjects(['parallax', 'platform', 'gameOver'], this)
     initCharacters(['bosses', 'players'], this)
     initSounds(['allSounds'], this)
 
@@ -33,10 +32,13 @@ export default class PlayScene extends Scene {
 
     this.physics.add.collider(this.player, this.platform)
     this.physics.add.collider(this.bosses, this.bosses)
-    this.physics.add.collider(this.bosses, this.platform, () => {
-      if (!this.endedGame) {
-        this.sound.play('thud', { volume: 0.75 })
-      }
+    this.bosses.children.iterate(boss => {
+      this.physics.add.collider(boss, this.platform, object => {
+        object.anims.play('smile', true)
+        setTimeout(() => {
+          if (object.anims) object.anims.play('normal', true)
+        }, 300)
+      })
     })
     this.physics.add.collider(this.player, this.bosses, () => {
       if (!this.endedGame) {
@@ -84,13 +86,8 @@ export default class PlayScene extends Scene {
       this.player.anims.play('turn')
     }
     // this.player.body.touching.down
-    if (this.cursors.up.isDown && this.touchGround < 15) {
-      this.touchGround++
-      this.player.setVelocityY(-500)
-    }
-
-    if (this.player.body.touching.down && this.touchGround >= 0) {
-      this.touchGround--
+    if (this.cursors.up.isDown && this.player.body.touching.down) {
+      this.player.setVelocityY(-600)
     }
   }
 }

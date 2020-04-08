@@ -35,20 +35,20 @@ const players = game => {
   })
 }
 
-const velocity = game => {
-  game.velocityText = game.add.text(710, 30,
-    'Velocity: 0',
-    { fontFamily: '"Press Start 2P", cursive', fontSize: '14px', fill: '#FFFFFF' }
-  )
-
-  game.timedEvent = game.time.addEvent({
-    delay: 100,
-    callback: () => {
-      game.velocityText.setText(`Velocity: ${game.touchGround}`)
-    },
-    loop: true
-  })
-}
+// const velocity = game => {
+//   game.velocityText = game.add.text(710, 30,
+//     'Velocity: 0',
+//     { fontFamily: '"Press Start 2P", cursive', fontSize: '14px', fill: '#FFFFFF' }
+//   )
+//
+//   game.timedEvent = game.time.addEvent({
+//     delay: 100,
+//     callback: () => {
+//       game.velocityText.setText(`Velocity: ${game.touchGround}`)
+//     },
+//     loop: true
+//   })
+// }
 
 const gameOver = game => {
   game.scoreText = game.add.text(30, 30,
@@ -88,10 +88,24 @@ const gameOver = game => {
 }
 
 const bosses = game => {
-  game.bosses = game.physics.add.group({
-    key: 'boss',
-    repeat: 4,
-    setXY: { x: 100, y: 200, stepX: 220 }
+  game.bosses = game.physics.add.group(
+    {
+      key: 'boss',
+      repeat: 8,
+      setXY: { x: 100, y: 200, stepX: 100 }
+    }
+  )
+
+  game.anims.create({
+    key: 'normal',
+    frames: [{ key: 'boss', frame: 2 }],
+    frameRate: 20
+  })
+
+  game.anims.create({
+    key: 'smile',
+    frames: [{ key: 'boss', frame: 3 }],
+    frameRate: 20
   })
 
   game.bosses.children.iterate((child, k) => {
@@ -148,8 +162,8 @@ const resources = {
   objects: {
     parallax,
     platform,
-    gameOver,
-    velocity
+    gameOver
+    // velocity
   },
   sounds: {
     allSounds
