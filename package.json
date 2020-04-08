@@ -14,6 +14,7 @@
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^4.4.1",
     "core-js": "^3.6.4",
+    "lodash": "^4.17.15",
     "phaser": "^3.22.0",
     "register-service-worker": "^1.6.2",
     "rellax": "^1.12.1",

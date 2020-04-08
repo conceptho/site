@@ -1,19 +1,19 @@
 <template>
   <div class="home">
     <TheTopMenu />
-    <AboutSection />
+    <ScrollHome />
   </div>
 </template>
 
 <script>
 import TheTopMenu from '../components/TheTopMenu'
-import AboutSection from '../components/AboutSection'
+import ScrollHome from '../components/ScrollHome'
 
 export default {
   name: 'Home',
   components: {
     TheTopMenu,
-    AboutSection
+    ScrollHome
   }
 }
 </script>

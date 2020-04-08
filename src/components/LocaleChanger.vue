@@ -4,7 +4,7 @@
       href="#"
       class="nav-link lang-option"
       :class="{ 'disabled': $i18n.locale === lang.locale }"
-      @click.prevent="$i18n.locale = lang.locale"
+      @click.prevent="changeLocale(lang.locale)"
       v-for="(lang, i) in langs"
       :key="`Lang${i}`">
       {{ lang.label }}
@@ -21,6 +21,12 @@ export default {
         { locale: 'en', label: 'en' },
         { locale: 'pt-BR', label: 'br' }
       ]
+    }
+  },
+  methods: {
+    changeLocale (locale) {
+      this.$emit('toggle-locale')
+      this.$i18n.locale = locale
     }
   }
 }

@@ -1,9 +1,9 @@
 <template>
-  <div ref="about-section" class="about-section bg-base">
+  <div ref="about-section" class="about-section bg-about">
     <div class="bg-elastic rellax-vertical" ref="elastic" data-rellax-speed="3" data-rellax-percentage="1">
       <img src="../assets/img/elastic.png" alt="Elastic">
     </div>
-    <section ref="slogan-section" class="top-section section-item" data-class="base" id="about-section">
+    <section ref="slogan-section" class="about-section section-item" data-class="about" id="about-section">
       <div class="container fullheight d-flex justify-content-center">
         <div class="row justify-content-center">
           <div class="col-md-9 align-self-center">
@@ -24,7 +24,7 @@
       </div>
     </section>
 
-    <section class="section-item roboto-mono" data-class="violet" id="cases-section">
+    <section class="section-item roboto-mono" data-class="cases" id="cases-section">
       <div class="container fullheight d-flex justify-content-center">
         <div class="row d-flex justify-content-center">
           <div class="col-12 text-center align-self-center">
@@ -44,7 +44,7 @@
       </div>
     </section>
 
-    <section class="section-item roboto-mono" data-class="white" id="contact-section">
+    <section class="section-item roboto-mono" data-class="contact" id="contact-section">
       <div class="container fullheight d-flex justify-content-center">
         <div class="row d-flex justify-content-center">
           <div class="col-12 text-center align-self-center">
@@ -67,7 +67,7 @@ import 'aos/dist/aos.css'
 AOS.init()
 
 export default {
-  name: 'AboutSection',
+  name: 'ScrollHome',
   components: { MouseIcon },
   data () {
     return {
@@ -101,7 +101,7 @@ $bg-image-01 : url('../assets/img/bg-team-01.jpg');
 $bg-image-02 : url('../assets/img/bg-team-02.jpg');
 $bg-image-03 : url('../assets/img/bg-team-03.jpg');
 
-.top-section {
+.about-section {
   position: relative;
 }
 .bg-elastic {
@@ -278,12 +278,18 @@ $bg-image-03 : url('../assets/img/bg-team-03.jpg');
   font-size: 20px;
   width: 75%;
 }
-.bg-base {
+.bg-about {
   @extend .contrast-bg-color;
 }
-.bg-violet {
+.body-bg-about {
+  background-color: $conceptho-secondary-bg-color;
+}
+.bg-cases {
   background-color: #7A4EAB;
   color: #fff;
+}
+.body-bg-cases {
+  background-color: #7A4EAB;
 }
 .bg-team {
   @extend .contrast-bg-color;
@@ -293,11 +299,20 @@ $bg-image-03 : url('../assets/img/bg-team-03.jpg');
     }
   }
 }
+.body-bg-team {
+  background-color: $conceptho-secondary-bg-color;
+}
 .bg-blue {
   background-color: #2F8FED;
   color: #fff;
 }
-.bg-white {
+.body-bg-blue {
+  background-color: #2F8FED;
+}
+.bg-contact {
+  background-color: #fff;
+}
+.body-bg-contact {
   background-color: #fff;
 }
 .text-our-team {

@@ -1,6 +1,9 @@
+import throttle from 'lodash/throttle'
+
 class EffectScroll {
   constructor () {
     this.functions = []
+    this.section = ''
   }
 
   opacity (element, rate) {
@@ -36,8 +39,22 @@ class EffectScroll {
             }
             target.classList.add(`bg-${panel.dataset.class}`)
 
+            const body = document.body
+            const bodyClasses =
+              body.getAttribute('class')
+                ? body.getAttribute('class').match(/(^|\s)body-bg-\S+/g)
+                : null
+
+            if (bodyClasses) {
+              bodyClasses.forEach(item => {
+                body.classList.remove(item.trim())
+              })
+            }
+
+            body.classList.add(`body-bg-${panel.dataset.class}`)
+
             const topMenu = document.querySelector('.top-menu')
-            const topMenuClasses = topMenu.getAttribute('class').match(/(^|\s)menu-bg-\S+/g)
+            const topMenuClasses = topMenu.getAttribute('class') ? topMenu.getAttribute('class').match(/(^|\s)menu-bg-\S+/g) : null
             if (topMenuClasses) {
               topMenuClasses.forEach(item => {
                 topMenu.classList.remove(item.trim())
@@ -45,6 +62,11 @@ class EffectScroll {
             }
 
             topMenu.classList.add(`menu-bg-${panel.dataset.class}`)
+            const changeSection = new CustomEvent('changesection', { detail: panel.dataset.class })
+            if (this.section !== panel.dataset.class) {
+              document.dispatchEvent(changeSection)
+              this.section = panel.dataset.class
+            }
           }
         })
       }
@@ -52,9 +74,9 @@ class EffectScroll {
   }
 
   init () {
-    document.addEventListener('scroll', () => {
+    document.addEventListener('scroll', throttle(() => {
       this.functions.forEach(func => func())
-    })
+    }, 650))
   }
 }
 

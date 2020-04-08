@@ -1,5 +1,5 @@
 <template>
-  <div class="top-menu">
+  <div class="top-menu pt-2 pt-md-3">
     <div class="mobile-menu" :class="{ 'active': mobileMenuActive }">
       <nav class="nav nav-mobile-menu">
         <LocaleChanger />
@@ -13,7 +13,7 @@
       <div class="row">
         <div class="col-12 align-self-center">
           <div class="logo ml-2 ml-md-3 mt-3">
-            <a href="#top-section" @click="goToSection('about')" style="color: inherit;">
+            <a href="#about-section" @click="goToSection('about')" style="color: inherit;">
               <LogoVertical width="500" />
             </a>
           </div>
@@ -27,12 +27,12 @@
           </div>
           <nav class="nav justify-content-end d-none d-md-flex">
             <div ref="nav-active" class="active-nav-bar"></div>
-            <LocaleChanger />
-            <a ref="nav-about" class="nav-link active" href="#" @click.prevent="goToSection('about')">{{ $t('about') }}</a>
-            <a ref="nav-cases" class="nav-link" href="#" @click.prevent="goToSection('cases')">{{ $t('cases') }}</a>
-            <a ref="nav-team" class="nav-link" href="#" @click.prevent="goToSection('team')">{{ $t('team') }}</a>
-            <a ref="nav-contact" class="nav-link" href="#" @click.prevent="goToSection('contact')">{{ $t('contact') }}</a>
-            <router-link ref="nav-notfound" class="nav-link" :to="{ name: 'NotFound' }">{{ $t('404') }}</router-link>
+            <LocaleChanger @toggle-locale="toggleLocale()" />
+            <router-link class="nav-link nav-about active" href="#" :to="{ hash: '#about-section' }">{{ $t('about') }}</router-link>
+            <router-link class="nav-link nav-cases" href="#" :to="{ hash: '#cases-section' }">{{ $t('cases') }}</router-link>
+            <router-link class="nav-link nav-team" href="#" :to="{ hash: '#team-section' }">{{ $t('team') }}</router-link>
+            <router-link class="nav-link nav-contact" href="#" :to="{ hash: '#contact-section' }">{{ $t('contact') }}</router-link>
+            <router-link class="nav-link nav-notfound" :to="{ name: 'NotFound' }">{{ $t('404') }}</router-link>
           </nav>
         </div>
       </div>
@@ -56,17 +56,17 @@ export default {
     }
   },
   async mounted () {
-    const routeHash = this.$route.hash
-    if (routeHash) {
-      await this.goToSection(routeHash.split('-')[0].split('#')[1], true)
-    } else {
-      await this.goToSection('about')
-    }
+    this.initSection()
+  },
+  created () {
+    document.addEventListener('changesection', event => {
+      this.goToSection(event.detail, true)
+    })
   },
   methods: {
     goToSection (section, withoutHash) {
       this.mobileMenuActive = false
-      const sectionRef = this.$refs[`nav-${section}`]
+      const sectionRef = document.querySelector(`.nav-${section}`)
 
       if (!withoutHash) {
         this.$router.push({ hash: `#${section}-section` })
@@ -97,6 +97,19 @@ export default {
         left: rect.left + window.scrollX,
         top: rect.top + window.scrollY,
         width: rect.width
+      }
+    },
+    toggleLocale () {
+      setTimeout(() => {
+        this.initSection()
+      }, 100)
+    },
+    initSection () {
+      const routeHash = this.$route.hash
+      if (routeHash) {
+        this.goToSection(routeHash.split('-')[0].split('#')[1], true)
+      } else {
+        this.goToSection('about')
       }
     }
   }
@@ -229,7 +242,7 @@ export default {
     height: 2px;
     background-color: $conceptho-primary-color;
     margin-left: 1.3rem;
-    top: 2.2rem;
+    top: 3.2rem;
     transition: all .12s ease-out;
   }
   .nav {
@@ -274,12 +287,12 @@ export default {
       }
     }
   }
-  &.menu-bg-violet, &.menu-bg-team {
+  &.menu-bg-cases, &.menu-bg-team {
     .logo {
       color: #fff;
     }
   }
-  &.menu-bg-white {
+  &.menu-bg-contact {
     .logo {
       color: $conceptho-secondary-bg-color;
     }
