@@ -1,5 +1,22 @@
 import throttle from 'lodash/throttle'
 
+const bodyThemeColors = {
+  about: '#1B1D1E',
+  cases: '#7A4EAB',
+  team: '#1B1D1E',
+  contact: '#FFFFFF'
+}
+
+const changeThemeColor = (section) => {
+  // Web and Android
+  const metaThemeColor = document.querySelector('meta[name=theme-color]')
+  metaThemeColor.setAttribute('content', bodyThemeColors[section])
+
+  // Apple
+  const appleThemeColor = document.querySelector('meta[name=apple-mobile-web-app-status-bar-style]')
+  appleThemeColor.setAttribute('content', bodyThemeColors[section])
+}
+
 class EffectScroll {
   constructor () {
     this.functions = []
@@ -67,6 +84,8 @@ class EffectScroll {
               document.dispatchEvent(changeSection)
               this.section = panel.dataset.class
             }
+
+            changeThemeColor(panel.dataset.class)
           }
         })
       }
