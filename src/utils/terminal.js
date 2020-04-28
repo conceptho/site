@@ -1,11 +1,12 @@
+/* eslint-disable no-console */
 import logo from '../assets/img/logo.svg'
 import wink from '../assets/img/piscadinha.png'
 
 const concepthoTermVersion = '1.0.0'
 
 const ga = window.ga || function (name, config) {
-  console.warn('Event called: ', name)
-  console.warn('Config object: ', config)
+  // console.warn('Event called: ', name)
+  // console.warn('Config object: ', config)
 }
 
 const containers = [
@@ -230,7 +231,6 @@ function ConcepthoTerm (config) {
       if (el.file === 'img/') {
         document.querySelectorAll('div').forEach(item => {
           item.classList.add('bg-no-image')
-          console.warn(item.style.backgroundImage)
         })
         imgFiles.forEach(item => { item.src = 'unknown' })
         svgFiles.forEach(item => item.parentNode.removeChild(item))
