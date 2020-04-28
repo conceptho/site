@@ -237,11 +237,10 @@ function ConcepthoTerm (config) {
       }
       if (el.file === 'css/') {
         cssFiles.forEach(item => item.parentNode.removeChild(item))
-      }
-      if (el.file === 'js/') {
         jsFiles.forEach(item => item.parentNode.removeChild(item))
         linkFiles.forEach(item => item.parentNode.removeChild(item))
       }
+
       return `\nThe <strong>${el.file}</strong> file has been deleted!\n\n`
     } else if (argc > 1) {
       return '\nThe file or directory does not exist!\n\n'
