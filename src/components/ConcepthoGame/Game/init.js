@@ -1,5 +1,6 @@
 import Phaser from 'phaser'
 import BootScene from './Scenes/BootScene'
+import SelectScene from './Scenes/SelectScene'
 import PlayScene from './Scenes/PlayScene'
 
 function launch (width, height, containerId) {
@@ -17,6 +18,7 @@ function launch (width, height, containerId) {
     },
     scene: [
       BootScene,
+      SelectScene,
       PlayScene
     ]
   })

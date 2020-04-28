@@ -1,4 +1,5 @@
 import { Scene } from 'phaser'
+import select from '../assets/select.png'
 import castle from '../assets/castle.gif'
 import boss from '../assets/boss-sprite.png'
 import thudMp3 from '../assets/thud.mp3'
@@ -15,6 +16,7 @@ export default class BootScene extends Scene {
   }
 
   preload () {
+    this.load.image('select', select)
     this.load.image('castle', castle)
     this.load.audio('thud', [thudMp3, thudOgg])
     this.load.audio('monster', [monster])
@@ -31,6 +33,6 @@ export default class BootScene extends Scene {
   }
 
   create () {
-    this.scene.start('PlayScene')
+    this.scene.start('SelectScene')
   }
 }

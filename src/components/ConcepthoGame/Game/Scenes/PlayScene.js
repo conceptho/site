@@ -19,6 +19,10 @@ export default class PlayScene extends Scene {
     }
   }
 
+  init (data) {
+    this.selectedPlayer = data.selectedPlayer
+  }
+
   create () {
     initObjects(['parallax', 'platform', 'gameOver'], this)
     initCharacters(['bosses', 'players'], this)
