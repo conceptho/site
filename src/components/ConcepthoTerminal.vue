@@ -33,7 +33,6 @@ export default {
       maxBufferLength: 8192,
       maxCommandHistory: 500,
       cmd: function (argv, argc) {
-        console.log(argv)
         return false
       }
     })
