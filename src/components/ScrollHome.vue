@@ -24,7 +24,37 @@
       </div>
     </section>
 
-    <section class="section-item roboto-mono" data-class="cases" id="cases-section">
+    <section class="section-item roboto-mono" data-class="cases" id="cases-section-club">
+      <div class="container fullheight d-flex justify-content-center">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 text-center align-self-center">
+            <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Something') }} <strong>{{ $t('important') }}</strong> {{ $t('here') }}</h4>
+            <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="1" data-rellax-percentage="0.5">{{ $t('Another thing') }}</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-item roboto-mono" data-class="tribuna" id="cases-section-tribuna">
+      <div class="container fullheight d-flex justify-content-center">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 text-center align-self-center">
+            <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Something') }} <strong>{{ $t('important') }}</strong> {{ $t('here') }}</h4>
+            <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="1" data-rellax-percentage="0.5">{{ $t('Another thing') }}</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-item roboto-mono" data-class="cases" id="cases-section-diamond">
+      <div class="container fullheight d-flex justify-content-center">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 text-center align-self-center">
+            <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Something') }} <strong>{{ $t('important') }}</strong> {{ $t('here') }}</h4>
+            <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="1" data-rellax-percentage="0.5">{{ $t('Another thing') }}</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-item roboto-mono" data-class="cases" id="cases-section-profissa">
       <div class="container fullheight d-flex justify-content-center">
         <div class="row d-flex justify-content-center">
           <div class="col-12 text-center align-self-center">
@@ -285,11 +315,15 @@ $bg-image-03 : url('../assets/img/bg-team-03.jpg');
   background-color: $conceptho-secondary-bg-color;
 }
 .bg-cases {
-  background-color: #7A4EAB;
-  color: #fff;
+  background-color: #FFF;
+  color: #000;
 }
 .body-bg-cases {
-  background-color: #7A4EAB;
+  background-color: #FFF;
+}
+.bg-tribuna {
+  background-color: $conceptho-secondary-bg-color;
+  color: #fff;
 }
 .bg-team {
   @extend .contrast-bg-color;
