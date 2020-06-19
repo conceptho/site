@@ -24,8 +24,9 @@
       </div>
     </section>
 
-    <section class="section-item roboto-mono" data-class="cases" id="cases-section-club">
-      <div class="container fullheight d-flex justify-content-center">
+    <section class="section-item roboto-mono cases-section" data-class="cases" id="cases-section-club">
+      <div class="fullheight d-flex justify-content-center">
+        <div class="bg-image-club"></div>
         <div class="row d-flex justify-content-center">
           <div class="col-12 text-center align-self-center">
             <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Something') }} <strong>{{ $t('important') }}</strong> {{ $t('here') }}</h4>
@@ -34,8 +35,9 @@
         </div>
       </div>
     </section>
-    <section class="section-item roboto-mono" data-class="tribuna" id="cases-section-tribuna">
-      <div class="container fullheight d-flex justify-content-center">
+    <section class="section-item roboto-mono cases-section tribuna-section" data-class="tribuna" id="cases-section-tribuna">
+      <div class="fullheight d-flex justify-content-center">
+        <div class="bg-image-tribuna"></div>
         <div class="row d-flex justify-content-center">
           <div class="col-12 text-center align-self-center">
             <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Something') }} <strong>{{ $t('important') }}</strong> {{ $t('here') }}</h4>
@@ -44,8 +46,9 @@
         </div>
       </div>
     </section>
-    <section class="section-item roboto-mono" data-class="cases" id="cases-section-diamond">
-      <div class="container fullheight d-flex justify-content-center">
+    <section class="section-item roboto-mono cases-section" data-class="cases" id="cases-section-diamond">
+      <div class="fullheight d-flex justify-content-center">
+        <div class="bg-image-diamond"></div>
         <div class="row d-flex justify-content-center">
           <div class="col-12 text-center align-self-center">
             <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Something') }} <strong>{{ $t('important') }}</strong> {{ $t('here') }}</h4>
@@ -54,8 +57,9 @@
         </div>
       </div>
     </section>
-    <section class="section-item roboto-mono" data-class="cases" id="cases-section-profissa">
-      <div class="container fullheight d-flex justify-content-center">
+    <section class="section-item roboto-mono cases-section profissa-section" data-class="profissa" id="cases-section-profissa">
+      <div class="fullheight d-flex justify-content-center">
+        <div class="bg-image-profissa"></div>
         <div class="row d-flex justify-content-center">
           <div class="col-12 text-center align-self-center">
             <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Something') }} <strong>{{ $t('important') }}</strong> {{ $t('here') }}</h4>
@@ -130,6 +134,10 @@ export default {
 $bg-image-01 : url('../assets/img/bg-team-01.jpg');
 $bg-image-02 : url('../assets/img/bg-team-02.jpg');
 $bg-image-03 : url('../assets/img/bg-team-03.jpg');
+$bg-image-club : url('../assets/img/club.jpg');
+$bg-image-tribuna : url('../assets/img/tribuna.jpg');
+$bg-image-diamond : $conceptho-secondary-bg-color;
+$bg-image-profissa : $conceptho-primary-color;
 
 .about-section {
   position: relative;
@@ -144,6 +152,69 @@ $bg-image-03 : url('../assets/img/bg-team-03.jpg');
 }
 .about-section {
   transition: all 1.2s ease;
+}
+
+.cases-section {
+  position: relative;
+  .bg-image-club, .bg-image-tribuna, .bg-image-diamond, .bg-image-profissa {
+    opacity: 0;
+  }
+}
+
+.bg-image-club {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-image: $bg-image-club;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all .8s linear;
+  &:before, &:after {
+    transition: all .2s linear;
+  }
+}
+
+.bg-image-tribuna {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-image: $bg-image-tribuna;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all .8s linear;
+  &:before, &:after {
+    transition: all .2s linear;
+  }
+}
+
+.bg-image-diamond {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  background-color: $bg-image-diamond;
+  transition: all .8s linear;
+  &:before, &:after {
+    transition: all .2s linear;
+  }
+}
+
+.bg-image-profissa {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: $bg-image-profissa;
+  transition: all .8s linear;
+  &:before, &:after {
+    transition: all .2s linear;
+  }
 }
 .team-section {
   position: relative;
@@ -226,7 +297,7 @@ $bg-image-03 : url('../assets/img/bg-team-03.jpg');
 
 .effect-three {
   @supports (filter: invert(1)) and (background-blend-mode: difference) {
-    background-image: $bg-image-03, $bg-image-03;
+    background-image: $bg-image-03, $bg-image-03, $bg-image-club, $bg-image-club, $bg-image-tribuna, $bg-image-tribuna, $bg-image-diamond, $bg-image-diamond, $bg-image-profissa, $bg-image-profissa;
     background-blend-mode: difference;
     background-position:
       calc(50% - 1px) calc(50% - 1px),
@@ -252,7 +323,7 @@ $bg-image-03 : url('../assets/img/bg-team-03.jpg');
     }
 
     &:before {
-      background-image: $bg-image-03, $bg-image-03;
+      background-image: $bg-image-03, $bg-image-03, $bg-image-club, $bg-image-club, $bg-image-tribuna, $bg-image-tribuna, $bg-image-diamond, $bg-image-diamond, $bg-image-profissa, $bg-image-profissa;
       background-blend-mode: difference;
       background-position:
         calc(50% - 1px) calc(50% - 1px),
@@ -283,7 +354,7 @@ $bg-image-03 : url('../assets/img/bg-team-03.jpg');
     }
 
     &:before {
-      background-image: $bg-image-03, $bg-image-03;
+      background-image: $bg-image-03, $bg-image-03, $bg-image-club, $bg-image-club, $bg-image-tribuna, $bg-image-tribuna, $bg-image-diamond, $bg-image-diamond, $bg-image-profissa, $bg-image-profissa;
       background-blend-mode: difference;
       background-position:
         calc(50% - 1px) calc(50% - 1px),
@@ -293,7 +364,7 @@ $bg-image-03 : url('../assets/img/bg-team-03.jpg');
     }
 
     &:after {
-      background-image: $bg-image-03;
+      background-image: $bg-image-03, $bg-image-club, $bg-image-tribuna, $bg-image-diamond, $bg-image-profissa;
       background-position: center;
       mix-blend-mode: multiply;
       filter: brightness(1.3) blur(2px) contrast(2);
@@ -317,13 +388,35 @@ $bg-image-03 : url('../assets/img/bg-team-03.jpg');
 .bg-cases {
   background-color: #FFF;
   color: #000;
+  @extend .contrast-bg-color;
+  .cases-section {
+    .bg-image-club, .bg-image-diamond {
+      opacity: 1;
+    }
+  }
 }
 .body-bg-cases {
   background-color: #FFF;
 }
+.bg-profissa{
+  background-color: #FFF;
+  color: #000;
+  @extend .contrast-bg-color;
+  .profissa-section {
+    .bg-image-profissa {
+      opacity: 1;
+    }
+  }
+}
 .bg-tribuna {
   background-color: $conceptho-secondary-bg-color;
   color: #fff;
+  @extend .contrast-bg-color;
+  .tribuna-section {
+    .bg-image-tribuna {
+      opacity: 1;
+    }
+  }
 }
 .bg-team {
   @extend .contrast-bg-color;
