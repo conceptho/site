@@ -27,10 +27,13 @@
     <section class="section-item roboto-mono cases-section" data-class="cases" id="cases-section-club">
       <div class="fullheight d-flex justify-content-center">
         <div class="bg-image-club"></div>
-        <div class="row d-flex justify-content-center">
-          <div class="col-12 text-center align-self-center">
-            <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Something') }} <strong>{{ $t('important') }}</strong> {{ $t('here') }}</h4>
-            <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="1" data-rellax-percentage="0.5">{{ $t('Another thing') }}</h4>
+        <div class="col-12 align-self-center">
+          <div class="offset-md-3 col-5">
+            <h3 class="display-3 rellax-vertical tittle-cases" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Clube da') }}</h3>
+            <h3 class="display-3 rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Cerveja') }}</strong></h3>
+          </div>
+          <div class="sub-slogan offset-md-5 col-md-5 font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+            {{ $t('Mobile app for android and ios, with development from the prototype to continuous integration') }}
           </div>
         </div>
       </div>
@@ -38,10 +41,13 @@
     <section class="section-item roboto-mono cases-section tribuna-section" data-class="tribuna" id="cases-section-tribuna">
       <div class="fullheight d-flex justify-content-center">
         <div class="bg-image-tribuna"></div>
-        <div class="row d-flex justify-content-center">
-          <div class="col-12 text-center align-self-center">
-            <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Something') }} <strong>{{ $t('important') }}</strong> {{ $t('here') }}</h4>
-            <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="1" data-rellax-percentage="0.5">{{ $t('Another thing') }}</h4>
+        <div class="col-12 align-self-center">
+          <div class="offset-md-4 col-4">
+            <h3 class="display-3 rellax-vertical tittle-tribuna tittle-cases" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Tribuna') }}</h3>
+            <h3 class="display-3 rellax-vertical tittle-tribuna" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Online') }}</strong></h3>
+          </div>
+          <div class="sub-slogan text-right offset-md-1 col-md-5 font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+            {{ $t('Complete restructuring of the Espírito Santo news portal, with a load reduction of more than 70%') }}
           </div>
         </div>
       </div>
@@ -49,10 +55,12 @@
     <section class="section-item roboto-mono cases-section" data-class="cases" id="cases-section-diamond">
       <div class="fullheight d-flex justify-content-center">
         <div class="bg-image-diamond"></div>
-        <div class="row d-flex justify-content-center">
-          <div class="col-12 text-center align-self-center">
-            <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Something') }} <strong>{{ $t('important') }}</strong> {{ $t('here') }}</h4>
-            <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="1" data-rellax-percentage="0.5">{{ $t('Another thing') }}</h4>
+        <div class="col-12 align-self-center">
+          <div class="offset-md-4 col-5">
+            <h3 class="display-3 rellax-vertical tittle-cases" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Go') }}<strong>{{ $t('Diamond') }}</strong></h3>
+          </div>
+          <div class="sub-slogan text-right offset-md-2 col-md-4 font-weight-light text-white rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+            {{ $t('Android and iOS app that organizes contacts for multi-level marketers.') }}
           </div>
         </div>
       </div>
@@ -60,12 +68,15 @@
     <section class="section-item roboto-mono cases-section profissa-section" data-class="profissa" id="cases-section-profissa">
       <div class="fullheight d-flex justify-content-center">
         <div class="bg-image-profissa"></div>
-        <div class="row d-flex justify-content-center">
-          <div class="col-12 text-center align-self-center">
-            <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Something') }} <strong>{{ $t('important') }}</strong> {{ $t('here') }}</h4>
-            <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="1" data-rellax-percentage="0.5">{{ $t('Another thing') }}</h4>
+        <div class="col-7 align-self-center">
+          <div class="offset-md-5 col-md-4">
+            <h3 class="display-3 rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Profissa') }}</strong></h3>
+          </div>
+          <div class="sub-slogan text-right offset-md-3 col-md-5 font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+            {{ $t('Android and iOS app that organizes contacts for multi-level marketers.') }}
           </div>
         </div>
+        <div class="col-md-3 align-self-end"><img class="img-fluid" src="../assets/img/profissa_rocket.png"></div>
       </div>
     </section>
 
@@ -158,6 +169,15 @@ $bg-image-profissa : $conceptho-primary-color;
   position: relative;
   .bg-image-club, .bg-image-tribuna, .bg-image-diamond, .bg-image-profissa {
     opacity: 0;
+  }
+  .tittle-cases{
+    letter-spacing: 0.2em;
+  }
+}
+
+.tribuna-section {
+  .tittle-tribuna{
+    color: $conceptho-primary-color;
   }
 }
 
