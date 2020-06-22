@@ -26,11 +26,12 @@
 
     <section class="section-item roboto-mono cases-section" data-class="cases" id="cases-section-club">
       <div class="fullheight d-flex justify-content-center">
-        <div class="bg-image-club"></div>
+        <div class="bg-image-club d-none d-md-block"></div>
+        <div class="bg-image-club-mobile d-md-none"></div>
         <div class="col-12 align-self-center">
           <div class="offset-md-3 col-5">
-            <h3 class="display-3 rellax-vertical tittle-cases" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Clube da') }}</h3>
-            <h3 class="display-3 rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Cerveja') }}</strong></h3>
+            <h4 class="display-4 rellax-vertical tittle-cases" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Clube da') }}</h4>
+            <h4 class="display-4 rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Cerveja') }}</strong></h4>
           </div>
           <div class="sub-slogan offset-md-5 col-md-5 font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
             {{ $t('Mobile app for android and ios, with development from the prototype to continuous integration') }}
@@ -40,11 +41,12 @@
     </section>
     <section class="section-item roboto-mono cases-section tribuna-section" data-class="tribuna" id="cases-section-tribuna">
       <div class="fullheight d-flex justify-content-center">
-        <div class="bg-image-tribuna"></div>
+        <div class="bg-image-tribuna d-none d-md-block"></div>
+        <div class="bg-image-tribuna-mobile d-md-none"></div>
         <div class="col-12 align-self-center">
           <div class="offset-md-4 col-4">
-            <h3 class="display-3 rellax-vertical tittle-tribuna tittle-cases" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Tribuna') }}</h3>
-            <h3 class="display-3 rellax-vertical tittle-tribuna" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Online') }}</strong></h3>
+            <h4 class="display-4 rellax-vertical tittle-tribuna tittle-cases" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Tribuna') }}</h4>
+            <h4 class="display-4 rellax-vertical tittle-tribuna" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Online') }}</strong></h4>
           </div>
           <div class="sub-slogan text-right offset-md-1 col-md-5 font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
             {{ $t('Complete restructuring of the Espírito Santo news portal, with a load reduction of more than 70%') }}
@@ -54,10 +56,11 @@
     </section>
     <section class="section-item roboto-mono cases-section" data-class="cases" id="cases-section-diamond">
       <div class="fullheight d-flex justify-content-center">
-        <div class="bg-image-diamond"></div>
+        <div class="bg-image-diamond d-none d-md-block"></div>
+        <div class="bg-image-diamond-mobile d-md-none"></div>
         <div class="col-12 align-self-center">
           <div class="offset-md-4 col-5">
-            <h3 class="display-3 rellax-vertical tittle-cases" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Go') }}<strong>{{ $t('Diamond') }}</strong></h3>
+            <h4 class="display-4 rellax-vertical tittle-cases" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Go') }}<strong>{{ $t('Diamond') }}</strong></h4>
           </div>
           <div class="sub-slogan text-right offset-md-2 col-md-4 font-weight-light text-white rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
             {{ $t('Android and iOS app that organizes contacts for multi-level marketers.') }}
@@ -67,16 +70,18 @@
     </section>
     <section class="section-item roboto-mono cases-section profissa-section" data-class="profissa" id="cases-section-profissa">
       <div class="fullheight d-flex justify-content-center">
-        <div class="bg-image-profissa"></div>
-        <div class="col-7 align-self-center">
+        <div class="bg-image-profissa d-none d-md-block">
+        </div>
+        <div class="bg-image-profissa-mobile d-md-none"></div>
+        <div class="col-7 col-md-7 align-self-center">
           <div class="offset-md-5 col-md-4">
-            <h3 class="display-3 rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Profissa') }}</strong></h3>
+            <h4 class="display-4 rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Profissa') }}</strong></h4>
           </div>
           <div class="sub-slogan text-right offset-md-3 col-md-5 font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
             {{ $t('Android and iOS app that organizes contacts for multi-level marketers.') }}
           </div>
         </div>
-        <div class="col-md-3 align-self-end"><img class="img-fluid" src="../assets/img/profissa_rocket.png"></div>
+         <div class="col-md-3 align-self-end"><img class="img-fluid" src="../assets/img/profissa_rocket.png"></div>
       </div>
     </section>
 
@@ -146,6 +151,7 @@ $bg-image-01 : url('../assets/img/bg-team-01.jpg');
 $bg-image-02 : url('../assets/img/bg-team-02.jpg');
 $bg-image-03 : url('../assets/img/bg-team-03.jpg');
 $bg-image-club : url('../assets/img/club.jpg');
+$bg-image-club-mobile : url('../assets/img/club-mobile.jpg');
 $bg-image-tribuna : url('../assets/img/tribuna.jpg');
 $bg-image-diamond : $conceptho-secondary-bg-color;
 $bg-image-profissa : $conceptho-primary-color;
@@ -167,7 +173,7 @@ $bg-image-profissa : $conceptho-primary-color;
 
 .cases-section {
   position: relative;
-  .bg-image-club, .bg-image-tribuna, .bg-image-diamond, .bg-image-profissa {
+  .bg-image-club, .bg-image-club-mobile, .bg-image-tribuna, .bg-image-tribuna-mobile, .bg-image-diamond,.bg-image-diamond-mobile, .bg-image-profissa, .bg-image-profissa-mobile {
     opacity: 0;
   }
   .tittle-cases{
@@ -195,6 +201,35 @@ $bg-image-profissa : $conceptho-primary-color;
     transition: all .2s linear;
   }
 }
+.bg-image-club {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-image: $bg-image-club;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all .8s linear;
+  &:before, &:after {
+    transition: all .2s linear;
+  }
+}
+
+.bg-image-club-mobile {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background-image: $bg-image-club-mobile;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all .8s linear;
+  &:before, &:after {
+    transition: all .2s linear;
+  }
+}
 
 .bg-image-tribuna {
   position: absolute;
@@ -202,6 +237,21 @@ $bg-image-profissa : $conceptho-primary-color;
   right: 0;
   width: 50%;
   height: 100%;
+  background-image: $bg-image-tribuna;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all .8s linear;
+  &:before, &:after {
+    transition: all .2s linear;
+  }
+}
+
+.bg-image-tribuna-mobile {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 50%;
   background-image: $bg-image-tribuna;
   background-repeat: no-repeat;
   background-size: cover;
@@ -224,12 +274,45 @@ $bg-image-profissa : $conceptho-primary-color;
   }
 }
 
+.bg-image-diamond-mobile {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: $bg-image-diamond;
+  transition: all .8s linear;
+  &:before, &:after {
+    transition: all .2s linear;
+  }
+}
+
 .bg-image-profissa {
   position: absolute;
   top: 0;
   right: 0;
   width: 50%;
   height: 100%;
+  background-color: $bg-image-profissa;
+  transition: all .8s linear;
+  &:before, &:after {
+    transition: all .2s linear;
+  }
+}
+
+ .rocket-profissa{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  }
+
+.bg-image-profissa-mobile {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 55%;
   background-color: $bg-image-profissa;
   transition: all .8s linear;
   &:before, &:after {
@@ -317,7 +400,7 @@ $bg-image-profissa : $conceptho-primary-color;
 
 .effect-three {
   @supports (filter: invert(1)) and (background-blend-mode: difference) {
-    background-image: $bg-image-03, $bg-image-03, $bg-image-club, $bg-image-club, $bg-image-tribuna, $bg-image-tribuna, $bg-image-diamond, $bg-image-diamond, $bg-image-profissa, $bg-image-profissa;
+    background-image: $bg-image-03, $bg-image-03, $bg-image-club, $bg-image-club, $bg-image-club-mobile, $bg-image-club-mobile, $bg-image-tribuna, $bg-image-tribuna, $bg-image-diamond, $bg-image-diamond, $bg-image-profissa, $bg-image-profissa;
     background-blend-mode: difference;
     background-position:
       calc(50% - 1px) calc(50% - 1px),
@@ -343,7 +426,7 @@ $bg-image-profissa : $conceptho-primary-color;
     }
 
     &:before {
-      background-image: $bg-image-03, $bg-image-03, $bg-image-club, $bg-image-club, $bg-image-tribuna, $bg-image-tribuna, $bg-image-diamond, $bg-image-diamond, $bg-image-profissa, $bg-image-profissa;
+      background-image: $bg-image-03, $bg-image-03, $bg-image-club, $bg-image-club, $bg-image-club-mobile, $bg-image-club-mobile, $bg-image-tribuna, $bg-image-tribuna, $bg-image-diamond, $bg-image-diamond, $bg-image-profissa, $bg-image-profissa;
       background-blend-mode: difference;
       background-position:
         calc(50% - 1px) calc(50% - 1px),
@@ -374,7 +457,7 @@ $bg-image-profissa : $conceptho-primary-color;
     }
 
     &:before {
-      background-image: $bg-image-03, $bg-image-03, $bg-image-club, $bg-image-club, $bg-image-tribuna, $bg-image-tribuna, $bg-image-diamond, $bg-image-diamond, $bg-image-profissa, $bg-image-profissa;
+      background-image: $bg-image-03, $bg-image-03, $bg-image-club, $bg-image-club, $bg-image-club-mobile, $bg-image-club-mobile, $bg-image-tribuna, $bg-image-tribuna, $bg-image-diamond, $bg-image-diamond, $bg-image-profissa, $bg-image-profissa;
       background-blend-mode: difference;
       background-position:
         calc(50% - 1px) calc(50% - 1px),
@@ -384,7 +467,7 @@ $bg-image-profissa : $conceptho-primary-color;
     }
 
     &:after {
-      background-image: $bg-image-03, $bg-image-club, $bg-image-tribuna, $bg-image-diamond, $bg-image-profissa;
+      background-image: $bg-image-03, $bg-image-club, $bg-image-club-mobile, $bg-image-tribuna, $bg-image-diamond, $bg-image-profissa;
       background-position: center;
       mix-blend-mode: multiply;
       filter: brightness(1.3) blur(2px) contrast(2);
@@ -410,7 +493,7 @@ $bg-image-profissa : $conceptho-primary-color;
   color: #000;
   @extend .contrast-bg-color;
   .cases-section {
-    .bg-image-club, .bg-image-diamond {
+    .bg-image-club, .bg-image-club-mobile, .bg-image-diamond, .bg-image-diamond-mobile {
       opacity: 1;
     }
   }
@@ -423,7 +506,7 @@ $bg-image-profissa : $conceptho-primary-color;
   color: #000;
   @extend .contrast-bg-color;
   .profissa-section {
-    .bg-image-profissa {
+    .bg-image-profissa, .bg-image-profissa-mobile {
       opacity: 1;
     }
   }
@@ -433,7 +516,7 @@ $bg-image-profissa : $conceptho-primary-color;
   color: #fff;
   @extend .contrast-bg-color;
   .tribuna-section {
-    .bg-image-tribuna {
+    .bg-image-tribuna, .bg-image-tribuna-mobile {
       opacity: 1;
     }
   }
