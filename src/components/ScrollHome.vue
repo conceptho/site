@@ -36,6 +36,27 @@
           <div class="sub-slogan offset-md-5 col-md-5 font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
             {{ $t('Mobile app for android and ios, with development from the prototype to continuous integration') }}
           </div>
+          <div class="sub-slogan d-flex justify-content-between offset-md-5 col-md-5 font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+            <div>
+              <h5>Backoffice</h5>
+              <div class="badge badge-dark">Vue</div><br>
+              <div class="badge badge-dark">GraphQl</div><br>
+              <div class="badge badge-dark">Client</div><br>
+            </div>
+            <div>
+              <h5>Mobile</h5>
+              <div class="badge badge-dark">Dart</div><br>
+              <div class="badge badge-dark">Swift</div><br>
+              <div class="badge badge-dark">Objective-C</div><br>
+              <div class="badge badge-dark">Java</div><br>
+              <div class="badge badge-dark">Flutter</div><br>
+            </div>
+            <div>
+              <h5 class="badge badge-dark">API</h5><br>
+              <span>Typescript</span><br>
+              <span>Docker</span><br>
+            </div>
+          </div>
         </div>
       </div>
     </section>
