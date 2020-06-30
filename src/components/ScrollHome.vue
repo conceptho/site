@@ -34,28 +34,22 @@
             <h4 class="display-4 rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Cerveja') }}</strong></h4>
           </div>
           <div class="sub-slogan offset-md-5 col-md-5 font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
-            {{ $t('Mobile app for android and ios, with development from the prototype to continuous integration') }}
+            {{ $t('Mobile application for beer lovers, which aims to provide benefits to its members. For android and ios, with development of the prototype for continuous integration. It is the best platform to discover the biggest promotions in the region.') }}
           </div>
-          <div class="sub-slogan d-flex justify-content-between offset-md-5 col-md-5 font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
-            <div>
-              <h5>Backoffice</h5>
-              <div class="badge badge-dark">Vue</div><br>
-              <div class="badge badge-dark">GraphQl</div><br>
-              <div class="badge badge-dark">Client</div><br>
-            </div>
-            <div>
-              <h5>Mobile</h5>
-              <div class="badge badge-dark">Dart</div><br>
-              <div class="badge badge-dark">Swift</div><br>
-              <div class="badge badge-dark">Objective-C</div><br>
-              <div class="badge badge-dark">Java</div><br>
-              <div class="badge badge-dark">Flutter</div><br>
-            </div>
-            <div>
-              <h5 class="badge badge-dark">API</h5><br>
-              <span>Typescript</span><br>
-              <span>Docker</span><br>
-            </div>
+          <div class="sub-slogan offset-md-5 col-md-5 font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+              <span class="badge badge-dark mr-2">Vue</span>
+              <span class="badge badge-dark mr-2">GraphQl</span>
+              <span class="badge badge-dark mr-2">Client</span>
+              <span class="badge badge-dark mr-2">Swift</span>
+              <span class="badge badge-dark mr-2">Objective-C</span>
+              <span class="badge badge-dark mr-2">Java</span>
+              <span class="badge badge-dark mr-2">Flutter</span>
+              <span class="badge badge-dark mr-2">Typescript</span>
+              <span class="badge badge-dark mr-2">Docker</span>
+          </div>
+          <div class="sub-slogan d-flex offset-md-5 col-md-5 font-weight-light rellax-vertical pt-5" data-rellax-speed="1" data-rellax-percentage="0.5">
+            <AppleButton class="mr-3" />
+            <GoogleButton />
           </div>
         </div>
       </div>
@@ -134,12 +128,14 @@ import EffectScroll from '../utils/scrollEffect'
 import MouseIcon from './MouseIcon'
 import Rellax from 'rellax'
 import 'aos/dist/aos.css'
+import AppleButton from './AppleButton'
+import GoogleButton from './GoogleButton'
 
 AOS.init()
 
 export default {
   name: 'ScrollHome',
-  components: { MouseIcon },
+  components: { MouseIcon, AppleButton, GoogleButton },
   data () {
     return {
       rellax: {
