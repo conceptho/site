@@ -25,70 +25,85 @@
     </section>
 
     <section class="section-item roboto-mono cases-section" data-class="cases" id="cases">
+      <div class="bg-image-club d-none d-md-block"></div>
+      <div class="bg-image-club-mobile d-md-none"></div>
       <div class="container-fluid">
-        <div class="fullheight row justify-content-center">
-          <div class="bg-image-club d-none d-md-block"></div>
-          <div class="bg-image-club-mobile d-md-none"></div>
+        <div class="fullheight row">
           <div class="col-12 align-self-center">
-            <div class="offset-md-3 col-5">
-              <h4 class="display-4 rellax-vertical tittle-cases" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Clube da') }}</h4>
-              <h4 class="display-4 rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Cerveja') }}</strong></h4>
-            </div>
-            <div class="sub-slogan offset-md-5 col-md-5 font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
-              {{ $t('Mobile app for android and ios, with development from the prototype to continuous integration') }}
+            <div class="row">
+              <div class="col-12 offset-md-3 col-md-5">
+                <h4 class="display-4 rellax-vertical tittle-cases" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Clube da') }}</h4>
+                <h4 class="display-4 rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Cerveja') }}</strong></h4>
+              </div>
+              <div class="col-12 offset-md-5 col-md-6">
+                <div class="sub-slogan font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+                  {{ $t('Mobile app for android and ios, with development from the prototype to continuous integration') }}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
     <section class="section-item roboto-mono cases-section tribuna-section" data-class="tribuna" id="cases-section-tribuna">
+      <div class="bg-image-tribuna d-none d-md-block"></div>
+      <div class="bg-image-tribuna-mobile d-md-none"></div>
       <div class="container-fluid">
-        <div class="fullheight row justify-content-center">
-          <div class="bg-image-tribuna d-none d-md-block"></div>
-          <div class="bg-image-tribuna-mobile d-md-none"></div>
+        <div class="fullheight row">
           <div class="col-12 align-self-center">
-            <div class="offset-md-4 col-4">
-              <h4 class="display-4 rellax-vertical tittle-tribuna tittle-cases" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Tribuna') }}</h4>
-              <h4 class="display-4 rellax-vertical tittle-tribuna" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Online') }}</strong></h4>
-            </div>
-            <div class="sub-slogan text-right offset-md-1 col-md-5 font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
-              {{ $t('Complete restructuring of the Espírito Santo news portal, with a load reduction of more than 70%') }}
+            <div class="row">
+              <div class="col-12 offset-md-4 col-md-4">
+                <h4 class="display-4 rellax-vertical tittle-cases tittle-tribuna" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Tribuna') }}</h4>
+                <h4 class="display-4 rellax-vertical tittle-tribuna" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Online') }}</strong></h4>
+              </div>
+              <div class="col-12 offset-md-2 col-md-5">
+                <div class="sub-slogan text-right font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+                  {{ $t('Complete restructuring of the Espírito Santo news portal, with a load reduction of more than 70%') }}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
     <section class="section-item roboto-mono cases-section" data-class="cases" id="cases-section-diamond">
+      <div class="bg-image-diamond d-none d-md-block"></div>
+      <div class="bg-image-diamond-mobile d-md-none"></div>
       <div class="container-fluid">
-        <div class="fullheight row justify-content-center">
-          <div class="bg-image-diamond d-none d-md-block"></div>
-          <div class="bg-image-diamond-mobile d-md-none"></div>
+        <div class="fullheight row">
           <div class="col-12 align-self-center">
-            <div class="offset-md-4 col-5">
-              <h4 class="display-4 rellax-vertical tittle-cases" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Go') }}<strong>{{ $t('Diamond') }}</strong></h4>
-            </div>
-            <div class="sub-slogan text-right offset-md-2 col-md-4 font-weight-light text-white rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
-              {{ $t('Android and iOS app that organizes contacts for multi-level marketers.') }}
+            <div class="row">
+              <div class="col-12 offset-md-4 col-md-5">
+                <h4 class="display-4 rellax-vertical tittle-cases" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Go') }}<strong>{{ $t('Diamond') }}</strong></h4>
+              </div>
+              <div class="col-12 offset-md-2 col-md-5">
+                <div class="sub-slogan text-right text-white font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+                  {{ $t('Android and iOS app that organizes contacts for multi-level marketers.') }}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
     <section class="section-item roboto-mono cases-section profissa-section" data-class="profissa" id="cases-section-profissa">
+      <div class="bg-image-profissa d-none d-md-block"></div>
+      <div class="bg-image-profissa-mobile d-md-none"></div>
       <div class="container-fluid">
-        <div class="fullheight row justify-content-center">
-          <div class="bg-image-profissa d-none d-md-block">
-          </div>
-          <div class="bg-image-profissa-mobile d-md-none"></div>
-          <div class="col-7 col-md-7 align-self-center">
-            <div class="offset-md-5 col-md-4">
-              <h4 class="display-4 rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Profissa') }}</strong></h4>
+        <div class="fullheight row">
+          <div class="col-12 col-md-8 align-self-center">
+            <div class="row">
+              <div class="col-12 offset-md-6 col-md-6">
+                <h4 class="display-4 rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Profissa') }}</strong></h4>
+              </div>
+              <div class="col-12 offset-md-2 col-md-8">
+                <div class="sub-slogan text-right font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+                  {{ $t('Android and iOS app that organizes contacts for multi-level marketers.') }}
+                </div>
+              </div>
             </div>
-            <div class="sub-slogan text-right offset-md-3 col-md-5 font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
-              {{ $t('Android and iOS app that organizes contacts for multi-level marketers.') }}
-            </div>
           </div>
-          <div class="col-md-3 align-self-end"><img class="img-fluid" src="../assets/img/profissa_rocket.png"></div>
+          <div class="col-12 col-md-3 align-self-end"><img class="img-fluid" src="../assets/img/profissa_rocket.png"></div>
         </div>
       </div>
     </section>
@@ -320,7 +335,7 @@ $bg-image-profissa : $conceptho-primary-color;
   bottom: 0;
   right: 0;
   width: 100%;
-  height: 55%;
+  height: 75%;
   background-color: $bg-image-profissa;
   transition: all .8s linear;
   &:before, &:after {
