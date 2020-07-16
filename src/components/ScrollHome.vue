@@ -24,20 +24,39 @@
       </div>
     </section>
 
-    <section class="section-item roboto-mono cases-section" data-class="cases" id="cases">
+     <section class="section-item roboto-mono cases-section" data-class="cases" id="cases-section">
       <div class="bg-image-club d-none d-md-block"></div>
       <div class="bg-image-club-mobile d-md-none"></div>
       <div class="container-fluid">
         <div class="fullheight row">
           <div class="col-12 align-self-center">
             <div class="row">
-              <div class="col-12 offset-md-3 col-md-5">
+              <div class="col-12 offset-md-6 col-md-6">
                 <h4 class="display-4 rellax-vertical tittle-cases" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Clube da') }}</h4>
                 <h4 class="display-4 rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Cerveja') }}</strong></h4>
               </div>
-              <div class="col-12 offset-md-5 col-md-6">
+              <div class="col-12 offset-md-6 col-md-6">
                 <div class="sub-slogan font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
-                  {{ $t('Mobile app for android and ios, with development from the prototype to continuous integration') }}
+                  {{ $t('Mobile application for beer lovers, which aims to provide benefits to its members. For android and ios, with development of the prototype for continuous integration. It is the best platform to discover the biggest promotions in the region.') }}
+                </div>
+                <div class="rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+                  <span class="badge badge-dark mr-2">Vue</span>
+                  <span class="badge badge-dark mr-2">GraphQl</span>
+                  <span class="badge badge-dark mr-2">Client</span>
+                  <span class="badge badge-dark mr-2">Swift</span>
+                  <span class="badge badge-dark mr-2">Objective-C</span>
+                  <span class="badge badge-dark mr-2">Java</span>
+                  <span class="badge badge-dark mr-2">Flutter</span>
+                  <span class="badge badge-dark mr-2">Typescript</span>
+                  <span class="badge badge-dark">Docker</span>
+                </div>
+                <div class="rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+                  <a href="https://apps.apple.com/us/app/id1479587151">
+                    <AppleButton class="mr-3" href="https://www.google.com.br/" />
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.conceptho.clubecerveja">
+                    <GoogleButton />
+                  </a>
                 </div>
               </div>
             </div>
@@ -52,13 +71,31 @@
         <div class="fullheight row">
           <div class="col-12 align-self-center">
             <div class="row">
-              <div class="col-12 offset-md-4 col-md-4">
+              <div class="col-12 offset-md-2 col-md-4 text-right">
                 <h4 class="display-4 rellax-vertical tittle-cases tittle-tribuna" data-rellax-speed="-1" data-rellax-percentage="0.5">{{ $t('Tribuna') }}</h4>
                 <h4 class="display-4 rellax-vertical tittle-tribuna" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Online') }}</strong></h4>
               </div>
-              <div class="col-12 offset-md-2 col-md-5">
-                <div class="sub-slogan text-right font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
-                  {{ $t('Complete restructuring of the Espírito Santo news portal, with a load reduction of more than 70%') }}
+              <div class="w-100"></div>
+              <div class="col-12 offset-md-2 col-md-4">
+                <div class="text-right font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+                  {{ $t('Complete restructuring of the Espírito Santo news portal, with a load reduction of more than 70% and 103% increase in page views.') }}
+                </div>
+                <div class="rellax-vertical text-right pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+                  <span class="badge badge-light mr-2">Bolt</span>
+                  <span class="badge badge-light mr-2">Vue</span>
+                  <span class="badge badge-light mr-2">PHP</span>
+                  <span class="badge badge-light mr-2">MySQL</span>
+                  <span class="badge badge-light mr-2">ElasticSearch</span>
+                  <span class="badge badge-light mr-2">Redis</span>
+                  <span class="badge badge-light mr-2">Docker</span>
+                  <span class="badge badge-light mr-2">Varnish</span>
+                </div>
+                <div class="rellax-vertical pt-2 text-right" data-rellax-speed="1" data-rellax-percentage="0.5">
+                  <div  class="btn btn-primary btn-site mr-2">
+                    <a href="https://tribunaonline.com.br">
+                      Visit the Tribuna Online website
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -78,7 +115,22 @@
               </div>
               <div class="col-12 offset-md-2 col-md-5">
                 <div class="sub-slogan text-right text-white font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
-                  {{ $t('Android and iOS app that organizes contacts for multi-level marketers.') }}
+                  {{ $t('Android and iOS application that managing tasks and contacts for multi-level marketers.') }}
+                </div>
+                <div class="rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+                  <span class="badge badge-dark mr-2">Flutter</span>
+                  <span class="badge badge-dark mr-2">Dart</span>
+                  <span class="badge badge-dark mr-2">GraphQL</span>
+                  <span class="badge badge-dark mr-2">Typescript</span>
+                  <span class="badge badge-dark mr-2">Docker</span>
+                </div>
+                <div class="rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+                  <a href="https://apps.apple.com/us/app/id1472782302">
+                    <AppleButton class="mr-3" href="https://www.google.com.br/" />
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=app.godiamond">
+                    <GoogleButton />
+                  </a>
                 </div>
               </div>
             </div>
@@ -96,9 +148,22 @@
               <div class="col-12 offset-md-6 col-md-6">
                 <h4 class="display-4 rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5"><strong>{{ $t('Profissa') }}</strong></h4>
               </div>
-              <div class="col-12 offset-md-2 col-md-8">
-                <div class="sub-slogan text-right font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
-                  {{ $t('Android and iOS app that organizes contacts for multi-level marketers.') }}
+              <div class="col-12 offset-md-2 col-md-7">
+                <div class="text-right font-weight-light rellax-vertical pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+                  {{ $t('Profissa simplifies the way to get a new job, guiding the process of creating a professional curriculum and connecting thousands of people to companies across Brazil.') }}
+                </div>
+                <div class="rellax-vertical text-right pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+                  <span class="badge badge-dark mr-2">PHP</span>
+                  <span class="badge badge-dark mr-2">Angular JS</span>
+                  <span class="badge badge-dark mr-2">ElasticSearch</span>
+                  <span class="badge badge-dark mr-2">MySQL</span>
+                </div>
+                <div class="rellax-vertical text-right pt-2" data-rellax-speed="1" data-rellax-percentage="0.5">
+                  <div  class="btn btn-secondary mr-2">
+                    <a href="https://profissa.net">
+                      Visit the profissa website
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -136,12 +201,14 @@ import EffectScroll from '../utils/scrollEffect'
 import MouseIcon from './MouseIcon'
 import Rellax from 'rellax'
 import 'aos/dist/aos.css'
+import AppleButton from './AppleButton'
+import GoogleButton from './GoogleButton'
 
 AOS.init()
 
 export default {
   name: 'ScrollHome',
-  components: { MouseIcon },
+  components: { MouseIcon, AppleButton, GoogleButton },
   data () {
     return {
       rellax: {
@@ -173,11 +240,11 @@ export default {
 $bg-image-01 : url('../assets/img/bg-team-01.jpg');
 $bg-image-02 : url('../assets/img/bg-team-02.jpg');
 $bg-image-03 : url('../assets/img/bg-team-03.jpg');
-$bg-image-club : url('../assets/img/club.jpg');
+$bg-image-club : url('../assets/img/cerveja.png');
 $bg-image-club-mobile : url('../assets/img/club-mobile.jpg');
-$bg-image-tribuna : url('../assets/img/tribuna.jpg');
-$bg-image-diamond : $conceptho-secondary-bg-color;
-$bg-image-profissa : $conceptho-primary-color;
+$bg-image-tribuna : url('../assets/img/tribuna.png');
+$bg-image-diamond : #007aff;
+$bg-image-profissa : #dd5752;
 
 .about-section {
   position: relative;
@@ -218,21 +285,7 @@ $bg-image-profissa : $conceptho-primary-color;
   height: 100%;
   background-image: $bg-image-club;
   background-repeat: no-repeat;
-  background-size: contain;
-  transition: all .8s linear;
-  &:before, &:after {
-    transition: all .2s linear;
-  }
-}
-.bg-image-club {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background-image: $bg-image-club;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   transition: all .8s linear;
   &:before, &:after {
     transition: all .2s linear;
@@ -289,7 +342,7 @@ $bg-image-profissa : $conceptho-primary-color;
   bottom: 0;
   left: 0;
   width: 50%;
-  height: 50%;
+  height: 100%;
   background-color: $bg-image-diamond;
   transition: all .8s linear;
   &:before, &:after {
@@ -302,7 +355,7 @@ $bg-image-profissa : $conceptho-primary-color;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50%;
+  height: 60%;
   background-color: $bg-image-diamond;
   transition: all .8s linear;
   &:before, &:after {
@@ -594,4 +647,26 @@ $bg-image-profissa : $conceptho-primary-color;
     width: 100%;
   }
 }
+
+.btn-primary{
+  background-color: $conceptho-primary-color !important;
+  border-color: $conceptho-primary-color !important;
+  border-radius: 50px !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  a, a:hover {
+    color: #fff;
+  }
+}
+.btn-secondary{
+  background-color: $conceptho-secondary-bg-color !important;
+  border-color: $conceptho-secondary-bg-color !important;
+  border-radius: 50px !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  a, a:hover {
+    color: #fff;
+  }
+}
+
 </style>
