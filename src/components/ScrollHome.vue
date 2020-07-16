@@ -376,19 +376,19 @@ $bg-image-profissa : #dd5752;
   }
 }
 
- .rocket-profissa{
+.rocket-profissa{
   position: absolute;
   bottom: 0;
   right: 0;
   width: 100%;
-  }
+}
 
 .bg-image-profissa-mobile {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 100%;
-  height: 55%;
+  height: 75%;
   background-color: $bg-image-profissa;
   transition: all .8s linear;
   &:before, &:after {
