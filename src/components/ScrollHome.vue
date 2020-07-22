@@ -67,6 +67,7 @@
     <section class="section-item roboto-mono cases-section tribuna-section" data-class="tribuna" id="cases-section-tribuna">
       <div class="bg-image-tribuna d-none d-md-block"></div>
       <div class="bg-image-tribuna-mobile d-md-none"></div>
+       <SubMenuCases/>
       <div class="container-fluid">
         <div class="fullheight row">
           <div class="col-12 align-self-center">
@@ -203,12 +204,13 @@ import Rellax from 'rellax'
 import 'aos/dist/aos.css'
 import AppleButton from './AppleButton'
 import GoogleButton from './GoogleButton'
+import SubMenuCases from './SubMenuCases'
 
 AOS.init()
 
 export default {
   name: 'ScrollHome',
-  components: { MouseIcon, AppleButton, GoogleButton },
+  components: { MouseIcon, AppleButton, GoogleButton, SubMenuCases },
   data () {
     return {
       rellax: {
