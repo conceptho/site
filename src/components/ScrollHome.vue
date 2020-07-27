@@ -23,10 +23,10 @@
         </div>
       </div>
     </section>
-
-     <section class="section-item roboto-mono cases-section" data-class="cases" id="cases-section">
+    <section class="section-item roboto-mono cases-section" data-class="cases" id="cases-section">
       <div class="bg-image-club d-none d-md-block"></div>
       <div class="bg-image-club-mobile d-md-none"></div>
+      <SubMenuCases class="text-right submenu"/>
       <div class="container-fluid">
         <div class="fullheight row">
           <div class="col-12 align-self-center">
@@ -67,7 +67,7 @@
     <section class="section-item roboto-mono cases-section tribuna-section" data-class="tribuna" id="cases-section-tribuna">
       <div class="bg-image-tribuna d-none d-md-block"></div>
       <div class="bg-image-tribuna-mobile d-md-none"></div>
-       <SubMenuCases/>
+      <SubMenuCases class="submenu-left"/>
       <div class="container-fluid">
         <div class="fullheight row">
           <div class="col-12 align-self-center">
@@ -107,6 +107,7 @@
     <section class="section-item roboto-mono cases-section" data-class="cases" id="cases-section-diamond">
       <div class="bg-image-diamond d-none d-md-block"></div>
       <div class="bg-image-diamond-mobile d-md-none"></div>
+      <SubMenuCases class="text-right submenu"/>
       <div class="container-fluid">
         <div class="fullheight row">
           <div class="col-12 align-self-center">
@@ -142,6 +143,7 @@
     <section class="section-item roboto-mono cases-section profissa-section" data-class="profissa" id="cases-section-profissa">
       <div class="bg-image-profissa d-none d-md-block"></div>
       <div class="bg-image-profissa-mobile d-md-none"></div>
+      <SubMenuCases class="text-right submenu"/>
       <div class="container-fluid">
         <div class="fullheight row">
           <div class="col-12 col-md-8 align-self-center">
@@ -270,6 +272,21 @@ $bg-image-profissa : #dd5752;
   }
   .tittle-cases{
     letter-spacing: 0.2em;
+  }
+}
+
+.submenu{
+  position: absolute;
+  top: 80px;
+  right: 1.3rem;
+}
+
+.submenu-left{
+  position: absolute;
+  top: 140px;
+  left: 1.3rem;
+  .nav-link{
+    color: #fff !important;
   }
 }
 
