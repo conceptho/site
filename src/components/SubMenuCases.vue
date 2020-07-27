@@ -22,7 +22,7 @@
   }
   .nav-link {
     font-size: 16px;
-    padding: 0.5rem 1.3rem;
+    padding: 0.5rem 0rem;
     letter-spacing: .2em;
     transition: color .12s linear;
 

@@ -277,14 +277,20 @@ $bg-image-profissa : #dd5752;
 
 .submenu{
   position: absolute;
-  top: 80px;
+  top: 100px;
   right: 1.3rem;
+  z-index: 10;
+  .active{
+    margin-right: 20px;
+    font-weight: bold;
+  }
 }
 
 .submenu-left{
   position: absolute;
-  top: 140px;
+  top: 110px;
   left: 1.3rem;
+  z-index: 10;
   .nav-link{
     color: #fff !important;
   }
