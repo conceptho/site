@@ -287,9 +287,24 @@ export default {
       }
     }
   }
-  &.menu-bg-cases, &.menu-bg-team {
+  &.menu-bg-team {
     .logo {
       color: #fff;
+    }
+  }
+  &.menu-bg-cases {
+    .logo {
+      color: $conceptho-primary-color;
+    }
+    .nav:not(.nav-mobile-menu) {
+      .nav-link {
+        &:not(.disabled) {
+          color: $conceptho-secondary-bg-color;
+        }
+        &:hover {
+          color: $conceptho-primary-color;
+        }
+      }
     }
   }
   &.menu-bg-contact {
