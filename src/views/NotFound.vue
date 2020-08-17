@@ -5,9 +5,10 @@
       <div class="game-logo d-flex justify-content-center align-items-center"><img class="img-logo" src="./../components/ConcepthoGame/Game/assets/logo.png"></div>
       <ConcepthoGame />
       <div class="tutorial">
-        <p>1 - Press &rarr; to select your caracter</p>
-        <p>2 - Press Enter to chosee</p>
-        <p>3 - Use &larr; &uarr; &rarr; &darr; to control</p>
+        <p>1 - Press -> to select your caracter</p>
+        <p>2 - Press Enter to chose</p>
+        <p>3 - Use the control arrows to play</p>
+        <p>4 - Dodge the evil blocks</p>
       </div>
     </div>
   </div>
@@ -52,7 +53,7 @@ export default {
   position: absolute;
   top: 25%;
   right: 1%;
-  width: 15%;
+  width: 20%;
   font-family: 'Press Start 2P', cursive;
   color: white;
   p{
