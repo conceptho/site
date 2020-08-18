@@ -80,6 +80,7 @@ $main-font: "Dosis", sans-serif;
   top: 0;
   left: 0;
   z-index: -1;
+  opacity: 0;
 }
 .term {
   background-color: rgba(16, 15, 13, .9);
