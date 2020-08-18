@@ -2,7 +2,7 @@
   <div class="home">
     <TheTopMenu />
     <ScrollHome />
-    <ConcepthoTerminal />
+    <ConcepthoTerminal class="d-none d-md-block"/>
   </div>
 </template>
 

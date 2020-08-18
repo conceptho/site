@@ -21,20 +21,51 @@ class EffectScroll {
   constructor () {
     this.functions = []
     this.section = ''
+    this.buildThresholdList = () => {
+      const thresholds = []
+      const numSteps = 20
+
+      for (let i = 1.0; i <= numSteps; i++) {
+        const ratio = i / numSteps
+        thresholds.push(ratio)
+      }
+
+      thresholds.push(0)
+      return thresholds
+    }
   }
 
-  opacity (element, rate) {
-    this.functions.push(
-      () => {
-        let height = window.innerHeight
-        const scrollTop = (window.pageYOffset !== undefined)
-          ? window.pageYOffset
-          : (document.documentElement || document.body.parentNode || document.body).scrollTop
+  opacity (element, rate, onEnter, onExit) {
+    element.style.transition = 'opacity .3s linear'
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        const intersectionRatio = entry.intersectionRatio
+        if (intersectionRatio <= rate) {
+          element.style.opacity = 0
+          if (onExit) element.style.transform = onExit
+        } else {
+          element.style.opacity = intersectionRatio
+          if (onEnter) element.style.transform = onEnter
+        }
+      })
+    }, {
+      root: null,
+      threshold: this.buildThresholdList()
+    })
 
-        height = height / rate
-        element.style.opacity = (height - scrollTop) / height
-      }
-    )
+    observer.observe(element)
+
+    // this.functions.push(
+    //   () => {
+    //     let height = window.innerHeight
+    //     const scrollTop = (window.pageYOffset !== undefined)
+    //       ? window.pageYOffset
+    //       : (document.documentElement || document.body.parentNode || document.body).scrollTop
+    //
+    //     height = height / rate
+    //     element.style.opacity = (height - scrollTop) / height
+    //   }
+    // )
   }
 
   background (target, sectionClass) {
@@ -80,7 +111,7 @@ class EffectScroll {
 
             topMenu.classList.add(`menu-bg-${panel.dataset.class}`)
             const changeSection = new CustomEvent('changesection', { detail: panel.dataset.class })
-            if (this.section !== panel.dataset.class) {
+            if (this.section !== panel.dataset.class && !panel.dataset.scrollDisabled) {
               document.dispatchEvent(changeSection)
               this.section = panel.dataset.class
             }
@@ -95,22 +126,8 @@ class EffectScroll {
   init () {
     document.addEventListener('scroll', throttle(() => {
       this.functions.forEach(func => func())
-    }, 650))
+    }, 300))
   }
 }
-
-// const hexToRgb = hex => {
-//   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i
-//   hex = hex.replace(shorthandRegex, function (m, r, g, b) {
-//     return r + r + g + g + b + b
-//   })
-//
-//   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
-//   return result ? {
-//     r: parseInt(result[1], 16),
-//     g: parseInt(result[2], 16),
-//     b: parseInt(result[3], 16)
-//   } : null
-// }
 
 export default new EffectScroll()

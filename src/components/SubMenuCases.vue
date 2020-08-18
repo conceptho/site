@@ -2,12 +2,12 @@
   <div>
     <nav class="nav d-none d-md-block">
       <div class="sub-menu-tittle">
-        <h4>{{ $t('Our ') }}<strong class="green">{{ $t('Work') }}</strong></h4>
+        <h4>{{ $t('Cases ') }}</h4>
       </div>
-      <router-link class="nav-link active" href="#" :to="{ hash: '#cases-section' }">{{ $t('Clube da Cerveja') }}</router-link>
-      <router-link class="nav-link" href="#" :to="{ hash: '#cases-section-tribuna' }">{{ $t('Tribuna Online') }}</router-link>
-      <router-link class="nav-link" href="#" :to="{ hash: '#cases-section-diamond' }">{{ $t('GoDiamond') }}</router-link>
-      <router-link class="nav-link" href="#" :to="{ hash: '#cases-section-profissa' }">{{ $t('Profissa') }}</router-link>
+      <router-link class="nav-link" href="#" :to="{ hash: '#club-section' }">{{ $t('Clube da Cerveja') }}</router-link>
+      <router-link class="nav-link" href="#" :to="{ hash: '#tribuna-section' }">{{ $t('Tribuna Online') }}</router-link>
+      <router-link class="nav-link" href="#" :to="{ hash: '#godiamond-section' }">{{ $t('GoDiamond') }}</router-link>
+      <router-link class="nav-link" href="#" :to="{ hash: '#profissa-section' }">{{ $t('Profissa') }}</router-link>
     </nav>
   </div>
 </template>

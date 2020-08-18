@@ -4,7 +4,7 @@
       <nav class="nav nav-mobile-menu">
         <LocaleChanger />
         <a ref="nav-about" class="nav-link active" href="#" @click.prevent="goToSection('about')">{{ $t('about') }}</a>
-        <a ref="nav-cases" class="nav-link" href="#" @click.prevent="goToSection('cases')">{{ $t('cases') }}</a>
+        <a ref="nav-club" class="nav-link" href="#" @click.prevent="goToSection('club')">{{ $t('cases') }}</a>
         <a ref="nav-team" class="nav-link" href="#" @click.prevent="goToSection('team')">{{ $t('team') }}</a>
         <a ref="nav-contact" class="nav-link" href="#" @click.prevent="goToSection('contact')">{{ $t('contact') }}</a>
       </nav>
@@ -29,7 +29,7 @@
             <div ref="nav-active" class="active-nav-bar"></div>
             <LocaleChanger @toggle-locale="toggleLocale()" />
             <router-link class="nav-link nav-about active" href="#" :to="{ hash: '#about-section' }">{{ $t('about') }}</router-link>
-            <router-link class="nav-link nav-cases" href="#" :to="{ hash: '#cases-section' }">{{ $t('cases') }}</router-link>
+            <router-link class="nav-link nav-club" href="#" :to="{ hash: '#club-section' }">{{ $t('cases') }}</router-link>
             <router-link class="nav-link nav-team" href="#" :to="{ hash: '#team-section' }">{{ $t('team') }}</router-link>
             <router-link class="nav-link nav-contact" href="#" :to="{ hash: '#contact-section' }">{{ $t('contact') }}</router-link>
             <router-link class="nav-link nav-notfound" :to="{ name: 'NotFound' }">{{ $t('404') }}</router-link>
@@ -125,7 +125,7 @@ export default {
 @import "../assets/styles/general";
 .mobile-menu {
   position: absolute;
-  z-index: 2;
+  z-index: 99999;
   width: 80%;
   height: 100vh;
   left: -80%;
@@ -158,6 +158,7 @@ export default {
   }
 }
 .checkbox-menu-collapse {
+  z-index: 9999;
   input#menu {
     display: none;
   }
@@ -174,7 +175,7 @@ export default {
     position: absolute;
     top: 28px;
     right: 15px;
-    z-index: 200;
+    z-index: 9999;
   }
 
   .icon .menu,
@@ -307,6 +308,24 @@ export default {
       }
     }
   }
+  &.menu-bg-godiamond, &.menu-bg-club {
+    .logo {
+      color: #fff;
+    }
+    .nav:not(.nav-mobile-menu) {
+      .nav-link {
+        &:not(.disabled) {
+          color: $conceptho-secondary-bg-color;
+        }
+        &:hover {
+          color: $conceptho-primary-color;
+        }
+      }
+    }
+  }
+  &.menu-bg-club .logo {
+    color: #000;
+  }
   &.menu-bg-contact {
     .logo {
       color: $conceptho-secondary-bg-color;
@@ -325,6 +344,7 @@ export default {
 }
 .logo {
   position: fixed;
+  z-index: 9999;
   color: $conceptho-primary-color;
   transition: color .3s linear;
   transition: opacity .2s linear;
