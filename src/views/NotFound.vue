@@ -1,7 +1,16 @@
 <template>
   <div class="game-wrapper">
+    <div class="d-block d-lg-none mobile">
+      <div class="d-flex justify-content-center align-items-center">
+        <h1 class="display-5">404 - Not found</h1>
+      </div>
+      <p>Oh no, bad luck!</p>
+      <a href="https://conceptho.com">Go to the homepage</a>
+    </div>
     <div class="d-none d-lg-block">
-      <div class="tittle d-flex justify-content-center align-items-center"><h1 class="display-4">404 ERROR PAGE</h1></div>
+      <div class="tittle d-flex justify-content-center align-items-center">
+        <h1 class="display-5">404 - Not found</h1>
+      </div>
       <div class="game-logo d-flex justify-content-center align-items-center"><img class="img-logo" src="./../components/ConcepthoGame/Game/assets/logo.png"></div>
       <ConcepthoGame />
       <div class="tutorial">
@@ -36,7 +45,7 @@ export default {
 .tittle{
   font-family: 'Press Start 2P', cursive;
   color: white;
-  padding-top: 2%;
+  padding-top: 5%;
 }
 .game-logo{
   position: absolute;
@@ -46,18 +55,34 @@ export default {
   z-index: 999;
   .img-logo{
     height:100%;
+    margin-bottom: -65px;
   }
 }
 
 .tutorial{
   position: absolute;
-  top: 25%;
-  right: 1%;
-  width: 20%;
+  bottom: 1%;
+  width: 100%;
   font-family: 'Press Start 2P', cursive;
   color: white;
   p{
-    padding-bottom: 35px;
+    font-size: 10pt;
+    padding-bottom: 8px;
+    text-align: center;
+  }
+}
+
+.mobile{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  a{
+    color: $conceptho-primary-color;
   }
 }
 </style>
