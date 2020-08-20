@@ -1,11 +1,13 @@
 <template>
   <div class="game-wrapper">
-    <div class="d-block d-lg-none mobile">
-      <div class="d-flex justify-content-center align-items-center">
-        <h1 class="display-5">404 - Not found</h1>
+    <div class="d-block d-lg-none mobile-background">
+      <div class="mobile">
+        <div class="d-flex justify-content-center align-items-center">
+          <h1 class="display-5">404 - Not found</h1>
+        </div>
+        <p>Oh no, bad luck!</p>
+        <a href="https://conceptho.com">Go to the homepage</a>
       </div>
-      <p>Oh no, bad luck!</p>
-      <a href="https://conceptho.com">Go to the homepage</a>
     </div>
     <div class="d-none d-lg-block">
       <div class="tittle d-flex justify-content-center align-items-center">
@@ -34,9 +36,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../assets/styles/general";
-body {
+.game-wrapper {
   background-image: url("./../components/ConcepthoGame/Game/assets/background.png");
   background-repeat: repeat-y;
 }
@@ -68,6 +70,11 @@ body {
   }
 }
 
+.mobile-background{
+  background-image: url("./../components/ConcepthoGame/Game/assets/background.png");
+  width: 100%;
+  height: 100vh;
+}
 .mobile{
   position: absolute;
   top: 50%;
