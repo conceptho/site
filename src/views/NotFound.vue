@@ -48,23 +48,20 @@ export default {
   padding-top: 5%;
 }
 .game-logo{
-  position: absolute;
-  top: 15%;
   width: 100%;
   height: 100px;
-  z-index: 999;
   .img-logo{
     height:100%;
-    margin-bottom: -65px;
+    margin-bottom: -100px;
+    z-index: 999;
   }
 }
 
 .tutorial{
-  position: absolute;
-  bottom: 1%;
   width: 100%;
   font-family: 'Press Start 2P', cursive;
   color: white;
+  padding-top: 3%;
   p{
     font-size: 10pt;
     padding-bottom: 8px;
