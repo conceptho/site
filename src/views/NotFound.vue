@@ -17,7 +17,7 @@
         <p>1 - Press -> to select your caracter</p>
         <p>2 - Press Enter to chose</p>
         <p>3 - Use the control arrows to play</p>
-        <p>4 - Dodge the evil blocks</p>
+        <p class="m-0">4 - Dodge the evil blocks</p>
       </div>
     </div>
   </div>
@@ -34,12 +34,11 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../assets/styles/general";
-.game-wrapper {
-  width: 100%;
-  height: 100vh;
+body {
   background-image: url("./../components/ConcepthoGame/Game/assets/background.png");
+  background-repeat: repeat-y;
 }
 
 .tittle{
