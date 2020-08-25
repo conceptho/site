@@ -1,5 +1,5 @@
 <template>
-  <div class="game-wrapper d-flex justify-content-center align-items-center">
+  <div class="d-flex justify-content-center align-items-center">
     <div :id="containerId" v-if="downloaded"></div>
     <div class="placeholder" v-else>
       Downloading...
@@ -34,12 +34,7 @@ export default {
 </script>
 
 <style lang="scss">
-.game-wrapper {
-  width: 100%;
-  height: 100vh;
-  background-color: #120c06;
-}
 #game-container {
-  border: 10px solid #000;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
 }
 </style>
