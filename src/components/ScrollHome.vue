@@ -43,12 +43,27 @@
       </div>
     </section>
 
-    <section class="section-item roboto-mono" data-class="contact" id="contact-section">
-      <div class="container fullheight d-flex justify-content-center">
-        <div class="row d-flex justify-content-center">
-          <div class="col-12 text-center align-self-center">
-            <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="-1" data-rellax-percentage="0.5">Sei lá, <strong>cara</strong></h4>
-            <h4 class="display-4 font-weight-light rellax-vertical" data-rellax-speed="1" data-rellax-percentage="0.5">Outra coisa</h4>
+    <section class="section-item roboto-mono ml-5 mr-5" data-class="contact" id="contact-section">
+      <div class="container-fluid ">
+        <div class="row fullheight">
+          <div class="col-12 col-md-4 align-self-center">
+            <h3 class="font-weight-light pb-3" ><strong>{{ $t('Speak to Us') }}</strong></h3>
+            <h4 class="font-weight-light">{{ $t('+55 (27) 3022 1310') }}</h4>
+            <h4 class="font-weight-light">{{ $t('contato@conceptho.com') }}</h4>
+          </div>
+          <div class="col-12 col-md-4 align-self-center">
+            <h3 class="font-weight-light pb-3"><strong>{{ $t('Headquarters') }}</strong></h3>
+            <h4 class="font-weight-light">{{ $t('44 Comissário Octávio Queiroz St.') }}</h4>
+            <h4 class="font-weight-light">{{ $t('Vitória - ES') }}</h4>
+          </div>
+          <div class="col-12 col-md-4 align-self-center">
+            <h3 class="font-weight-light pb-3"><strong>{{ $t('See yourself here?') }}</strong></h3>
+            <h4 class="font-weight-light">
+              {{ $t('We are always looking for new members to join our team.') }}
+            </h4>
+            <h4 class="font-weight-light">
+              {{ $t('Send us an e-mail. 😄') }}
+            </h4>
           </div>
         </div>
       </div>
