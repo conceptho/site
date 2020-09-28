@@ -3,7 +3,7 @@
     <div class="bg-elastic rellax-vertical" ref="elastic" data-rellax-speed="3" data-rellax-percentage="1">
       <img src="../assets/img/elastic.png" alt="Elastic">
     </div>
-    <section ref="slogan-section" class="about-section section-item" data-class="about" id="about-section">
+    <section ref="slogan-section" class="slogan-section section-item" data-class="about" id="slogan-section">
       <div class="container fullheight d-flex justify-content-center">
         <div class="row justify-content-center">
           <div class="col-md-9 align-self-center">
@@ -125,9 +125,6 @@ $bg-image-tribuna : url('../assets/img/tribuna.png');
 $bg-image-diamond : #007aff;
 $bg-image-profissa : #dd5752;
 
-.about-section {
-  position: relative;
-}
 .bg-elastic {
   position: absolute;
   width: 100%;
